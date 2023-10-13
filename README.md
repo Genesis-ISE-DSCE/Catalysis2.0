@@ -3,7 +3,7 @@
 ## Useful Links
 [Link to Canva Design](https://www.figma.com/file/kiUDvRCy4G9symzK6J7I8h/Catalysis-2.0-UI-DESIGN?type=design&node-id=711-2&mode=design&t=84wq7nqQR3mbJ8A1-0)
 
-[Netlify Link](https://app.netlify.com/sites/catalysis2/configuration/general)
+[Netlify Link](https://catalysis2.netlify.app)
 
 ##### If you want to work on any component you have to request to work on the issue and it will be assigned. 
 The components are:
@@ -17,6 +17,7 @@ The components are:
 - Navbar
 - Schedule
 - Sponsors
+- Prizes
 
 The basic set up of the website is done. Use tailwind css for styling the website.
 Fork and add a star to the repo.
