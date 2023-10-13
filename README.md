@@ -2,6 +2,7 @@
 
 ## Useful Links
 [Link to Canva Design](https://www.figma.com/file/kiUDvRCy4G9symzK6J7I8h/Catalysis-2.0-UI-DESIGN?type=design&node-id=711-2&mode=design&t=84wq7nqQR3mbJ8A1-0)
+
 [Netlify Link](https://app.netlify.com/sites/catalysis2/configuration/general)
 
 ##### If you want to work on any component you have to request to work on the issue and it will be assigned. 
