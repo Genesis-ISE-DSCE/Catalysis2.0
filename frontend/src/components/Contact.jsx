@@ -1,5 +1,5 @@
 import React from "react";
-import bgPattern from './bgpattern.jpg'
+import bgPattern from '../assets/bgpattern.jpg'
 const Contact = () => {
 
     const bgImageStyle = {
@@ -29,8 +29,8 @@ const Contact = () => {
                         </a>
                     </div>
                     <div className ="text-center py-2
-                     text-[#ffffff]">70906 88613 | 73384 98081</div>
-                    <div className ="text-center py-4 pb-5 text-[#ffffff] ">Copyright @ 2023 All rights reserved | Made by genesis team.</div>
+                     text-[#ffffff]">Gagan: <a href="tel:9008243280">9008243280</a> | Tarana: <a href="tel:7483408791">7483408791</a></div>
+                    <div className ="text-center py-4 pb-5 text-[#ffffff] ">Copyright &#169; 2023 | All rights reserved | Made by team Genesis.</div>
                 </footer>
             </div>
     );
