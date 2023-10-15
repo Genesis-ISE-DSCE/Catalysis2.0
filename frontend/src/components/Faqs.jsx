@@ -8,7 +8,7 @@ const Faqs = () => {
     const accordionData = [
         {
             title: 'When and where will the technical fest be held?',
-            content: 'The technical fest will be held on the 23rd, 24th and 25th of January in the department of ISE.',
+            content: 'The technical fest will be held between 20th to 25th of November in the department of ISE.',
         },
         {
             title: 'What types of events and competitions will be held during the technical fest?',
@@ -72,7 +72,7 @@ const Faqs = () => {
                             </div>
                         </div>
                     </button>
-                    <div className={`${activeAccordion === index ? "block" : "hidden"} p-4`}>
+                    <div className={`${activeAccordion === index ? "block" : "hidden"} p-4 bg-[#604b74] rounded-md`}>
                         {item.content}
                     </div>
                 </div>
