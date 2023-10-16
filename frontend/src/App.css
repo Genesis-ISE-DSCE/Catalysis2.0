@@ -36,98 +36,94 @@
     transform: rotate(360deg);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   position: absolute;
   width: 100%;
   left: 0px;
   top: 0px;
-  background: radial-gradient(88.23% 154.15% at 53.75% 66.85%, #382749 0%, #000000 100%) ;
-  background-repeat: no-repeat; 
+  background: radial-gradient(
+    88.23% 154.15% at 53.75% 66.85%,
+    #382749 0%,
+    #000000 100%
+  );
+  background-repeat: no-repeat;
 }
 
-.main{
-display: grid;
-place-items: center;
-margin-top: 3%;
-align-items: stretch;
+.main {
+  display: grid;
+  place-items: center;
+  margin-top: 3%;
+  align-items: stretch;
 }
-.text{
-width: 397px;
-height: 19px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 28px;
-line-height: 40px;
-justify-self: end; 
-margin-top: -8%;
-margin-right: 16%;
-text-transform: capitalize;
-text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
-color: #FFFFFF;
+.text {
+  width: 397px;
+  height: 19px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  justify-self: end;
+  margin-top: -8%;
+  margin-right: 16%;
+  text-transform: capitalize;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
 }
-.text2{
-width: 430px;
-height: 48px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 32px;
-line-height: 39px;
-text-transform: capitalize;
-color: #FFFFFF;
-margin-top: -10%;
-text-align: center;
-text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+.text2 {
+  width: 430px;
+  height: 48px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-top: -10%;
+  text-align: center;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
-.mascot{
-
+.mascot {
   position: fixed;
   bottom: 0px;
   right: 0px;
   margin-bottom: -10%;
   margin-right: -5%;
   rotate: -10deg;
-  animation: bounce 4s infinite; 
+  animation: bounce 4s infinite;
   z-index: 1;
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-40px); 
+    transform: translateX(-40px);
   }
 }
 @media screen and (min-width: 768px) {
-  .text, .text2 {
-    font-size: 32px; 
-    line-height: 20px; 
+  .text,
+  .text2 {
+    font-size: 32px;
+    line-height: 20px;
   }
 }
 li :hover {
-  color: #B1F8F2;
+  color: #b1f8f2;
 }
-
-
-
-
-=======
->>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
-=======
->>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024

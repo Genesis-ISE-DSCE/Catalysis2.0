@@ -39,17 +39,13 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "tailwindcss": "^3.3.3"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   },
   "main": "tailwind.config.js",
   "author": "",
   "license": "ISC",
   "description": ""
-=======
+
   }
->>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
-=======
-  }
->>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
-}
+
+ 
