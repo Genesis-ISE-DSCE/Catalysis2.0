@@ -1,7 +1,7 @@
 # Catalysis2.0
 
 ## Useful Links
-[Link to Canva Design](https://www.figma.com/file/kiUDvRCy4G9symzK6J7I8h/Catalysis-2.0-UI-DESIGN?type=design&node-id=711-2&mode=design&t=84wq7nqQR3mbJ8A1-0)
+[Link to the Figma Design](https://www.figma.com/file/kiUDvRCy4G9symzK6J7I8h/Catalysis-2.0-UI-DESIGN?type=design&node-id=711-2&mode=design&t=84wq7nqQR3mbJ8A1-0)
 
 [Netlify Link](https://catalysis2.netlify.app)
 
