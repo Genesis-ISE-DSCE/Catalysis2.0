@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import "../App.css"
 import catalysisImg from '../assets/catalysis.png';
@@ -33,11 +34,16 @@ const Landing = () => {
        
         </>
 =======
+=======
+>>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
 const Landing = () => {
     return(
         <div>
             Landing
         </div>
+<<<<<<< HEAD
+>>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
+=======
 >>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
     );
 }
