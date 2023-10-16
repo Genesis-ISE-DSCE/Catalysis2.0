@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../App.css";
@@ -83,3 +84,14 @@ const Navbar = () => {
 };
 
 export default Navbar;
+=======
+const Navbar = () => {
+    return(
+        <div>
+            Navbar
+        </div>
+    );
+}
+
+export default Navbar;
+>>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024

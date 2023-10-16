@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import "../App.css"
 import catalysisImg from '../assets/catalysis.png';
@@ -31,6 +32,13 @@ const Landing = () => {
         </div>
        
         </>
+=======
+const Landing = () => {
+    return(
+        <div>
+            Landing
+        </div>
+>>>>>>> 8ddfa1eca38b0ea60cd09347cd515857900ab024
     );
 }
 
