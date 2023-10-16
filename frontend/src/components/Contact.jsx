@@ -1,5 +1,7 @@
 import React from "react";
-import bgPattern from '../assets/bgpattern.jpg'
+import bgPattern from '../assets/bgpattern.jpg';
+const coc = require("../assets/docs/COC - HACKMAN.cbf71a14409997d58003.pdf");
+
 const Contact = () => {
 
     const bgImageStyle = {
@@ -11,10 +13,8 @@ const Contact = () => {
     };
     return(
             <div id="Contact" className="bg-gradient-to-b from-[#29153D] to-[#000000] h-100 " style={bgImageStyle}  >
-                <div className="font-inter text-white text-center text-5xl font-bold mx-auto pt-12">
-                    Contact Us
-                </div>
-                <footer className= "text-center text-white">
+                <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl pt-12">Contact</h1>
+                <footer className= "text-center text-white pb-6">
                     <div className="pt-9 flex justify-center mb-9">
                         <a href="https://instagram.com/genesis.ise" target="_blank" class="mr-9" rel="noreferrer">
                             <img src="instagramlogo.png" alt="Logo" className = "h-14 pl-7"/>
@@ -28,10 +28,12 @@ const Contact = () => {
                             <img src="maillogo.png" alt="Logo" className = "h-14"/>
                         </a>
                     </div>
-                    <div className ="text-center py-2
+                    <div className ="text-center font-semibold py-2
                      text-[#ffffff]">Gagan: <a href="tel:9008243280">9008243280</a> | Tarana: <a href="tel:7483408791">7483408791</a></div>
-                    <div className ="text-center py-4 pb-5 text-[#ffffff] ">Copyright &#169; 2023 | All rights reserved | Made by team Genesis.</div>
+                     <div></div>
+                    <div className ="text-center text-lg px-2 py-4 pb-5 text-[#ffffff] ">&#169; 2023 Catalysis2.0 | All rights reserved | <a href={coc} rel='noreferrer noopener' target="_blank" className="hover:text-purple-300">Code of Conduct</a></div>
                 </footer>
+                <div className="bg-[#1d1526] text-center font-semibold text-white p-2">Made by team <a href="https://www.instagram.com/genesis.ise/" rel='noreferrer noopener' target="_blank" className='text-purple-300'>Genesis</a> with ❤️</div>
             </div>
     );
 }

@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 
 const Faqs = () => {
@@ -7,12 +6,16 @@ const Faqs = () => {
 
     const accordionData = [
         {
+            title: 'What is Catalysis2.0?',
+            content: 'Catalysis is a 3 day interdepartmental technical fest organised by team Genesis of the Department of Information Science and Engineering.'
+        },
+        {
             title: 'When and where will the technical fest be held?',
             content: 'The technical fest will be held between 20th to 25th of November in the department of ISE.',
         },
         {
             title: 'What types of events and competitions will be held during the technical fest?',
-            content: 'The technical fest will typically include various events, such as coding competitions, pitch-an-idea, debates, and speaker sessions on various technical topics.',
+            content: 'The technical fest will typically include various events, such as coding competitions, technoseek, gaming and speaker sessions on various technical topics.',
         },
         {
             title: 'Can non-IT branch students participate in the technical fest?',
@@ -38,21 +41,17 @@ const Faqs = () => {
     };
 
     return (
-
-        <div className="py-[4%] w-full" style={{backgroundColor: "#29153D"}} id='faq'>
-
-            <h1 className="font-bold text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-12 mt-6" style={{color:'#E5F2FF'}}>Frequently Asked Questions</h1>
-
+        <div className="py-16 w-full" style={{backgroundColor: "#29153D"}} id='faqs'>
+            <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl mb-12">FAQ'S</h1>
             {accordionData.map((item, index) => {
                 return <div key={index} className="mb-4">
-
-                <div className="p-2 rounded-md text-white shadow-md bg-[#72598A] w-3/4 mx-[13%] my-2">
+                <div className="rounded-md text-white shadow-md bg-[#72598A] w-3/4 mx-[13%] my-2">
                     <button
                         className="w-full text-left p-4"
                         onClick={() => toggleAccordion(index)}
                     >
                         <div className="flex items-center">
-                            <div className="text-lg font-medium">
+                            <div className="text-lg font-semibold">
                                 {item.title}
                             </div>
                             <div className="ml-auto">
@@ -72,7 +71,7 @@ const Faqs = () => {
                             </div>
                         </div>
                     </button>
-                    <div className={`${activeAccordion === index ? "block" : "hidden"} p-4 bg-[#604b74] rounded-md`}>
+                    <div className={`${activeAccordion === index ? "block" : "hidden"} p-4 text-white bg-[#604b74] rounded-md`}>
                         {item.content}
                     </div>
                 </div>
@@ -85,4 +84,4 @@ const Faqs = () => {
     );
 }
 
-export default Faqs
+export default Faqs;

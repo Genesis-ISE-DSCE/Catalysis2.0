@@ -1,10 +1,8 @@
 import React from "react";
 import "../App.css";
 import catalysisImg from "../assets/catalysis.png";
-// import mascot from '../images/mascot.png';
 import mascot3 from "../assets/mascot3.png";
 
-// import border from '../images/Catalysis Border.png';
 
 const Landing = () => {
   return (
