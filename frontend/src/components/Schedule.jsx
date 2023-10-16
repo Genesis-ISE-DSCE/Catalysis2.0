@@ -2,83 +2,83 @@ import React from 'react'
 
 const Schedule = () => {
   return (
-    <div id='schedule' className='bg-gradient-to-b from  from-[#29153D] to-[#000000]  lg:max-w-full lg:px-16 md:py-9 md:px-16 py-5 px-5'>
+    <div id='schedule' className='bg-gradient-to-b from  from-[#29153D] to-[#000000]  lg:max-w-full lg:px-16 lg:pb-20 md:py-9 md:px-16 py-5 px-5'>
         <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl pb-12">Schedule</h1>
             <table className="border-collapse border border-slate-500 text-[#E5F2FF] mx-auto border-spacing-9 font-Inter ">
                 <thead>
                     <tr>
-                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[220px] p-3 border-[#558289] bg-[#442F47] text-white text-center">Date</th>
-                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[320px] p-3 border-[#558289] bg-[#442F47] text-white text-center">Event</th>
-                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[240px] p-3 border-[#558289] bg-[#442F47] text-white text-center">Time</th>
-                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[360px] p-3 border-[#558289] bg-[#442F47] text-white text-center">Venue</th>
+                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[220px] p-3 bg-[#442F47] text-white text-center">Date</th>
+                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[320px] p-3 bg-[#442F47] text-white text-center">Event</th>
+                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[240px] p-3 bg-[#442F47] text-white text-center">Time</th>
+                    <th className="border-4 border-[#93a3eb] lg:text-3xl lg:w-[360px] p-3 bg-[#442F47] text-white text-center">Venue</th>
                     </tr>
                 </thead>
                 <tbody className='text-center lg:text-2xl lg:font-light '>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">23-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Inaugration</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white ">09:30-11:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">AV Auditorium</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">23-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Inaugration</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white ">09:30-11:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">AV Auditorium</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">23-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Air Crash</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">14:00-17:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Amphitheatre</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">23-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Air Crash</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">14:00-17:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Amphitheatre</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">23-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Quizz Up</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">11:00-16:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">#009 and #205 (ISE Dept)</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">23-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Quizz Up</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">11:00-16:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">#009 and #205 (ISE Dept)</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">23-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Coding JAM</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">14:00-17:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">All 4 Labs (ISE Dept)</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">23-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Coding JAM</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">14:00-17:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">All 4 Labs (ISE Dept)</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">24-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">What's the Point?</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">11:00-14:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Amphitheatre</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">24-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">What's the Point?</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">11:00-14:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Amphitheatre</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">24-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Innovator</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">14:00-17:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Amphitheatre</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">24-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Innovator</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">14:00-17:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Amphitheatre</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">24-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Call to Launch</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">10:00-13:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">#009 and #205 (ISE Dept)</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">24-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Call to Launch</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">10:00-13:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">#009 and #205 (ISE Dept)</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">25-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Code Red</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">10:00-14:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Virtual Mode</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">25-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Code Red</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">10:00-14:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Virtual Mode</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">25-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Techno Seek</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">12:00-15:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">DSCE Campus</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">25-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Techno Seek</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">12:00-15:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">DSCE Campus</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">25-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Prize Distribution</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">15:00-16:00</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">AV Auditorium</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">25-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Prize Distribution</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">15:00-16:00</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">AV Auditorium</td>
                     </tr>
                     <tr>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">25-01-2022</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">Closing Ceremony</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">16:00-16:30</td>
-                    <td className="border-4 border-[#93a3eb] p-2 border-[#558289] bg-[#442F47] text-white">AV Auditorium</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">25-01-2022</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">Closing Ceremony</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">16:00-16:30</td>
+                    <td className="border-4 border-[#93a3eb] p-2 bg-[#442F47] text-white">AV Auditorium</td>
                     </tr>
                 </tbody>
             </table>
