@@ -26,7 +26,7 @@ const Landing = () => {
           <br />
           <div className="">
             <p className="text2 max-w-screen-lg mx-auto text-lg sm:text-l md:text-2xl lg:text-3xl">
-              23-25th November
+              23<sup>rd</sup> - 25<sup>th</sup> November
             </p>
           </div>
         </div>
