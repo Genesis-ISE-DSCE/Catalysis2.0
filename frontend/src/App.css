@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -37,10 +41,6 @@
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 html,
 body {
   height: 100%;
@@ -59,42 +59,6 @@ body {
     #000000 100%
   );
   background-repeat: no-repeat;
-}
-
-.main {
-  display: grid;
-  place-items: center;
-  margin-top: 3%;
-  align-items: stretch;
-}
-.text {
-  width: 397px;
-  height: 19px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 40px;
-  justify-self: end;
-  margin-top: -8%;
-  margin-right: 16%;
-  text-transform: capitalize;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-}
-.text2 {
-  width: 430px;
-  height: 48px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 39px;
-  text-transform: capitalize;
-  color: #ffffff;
-  margin-top: -10%;
-  text-align: center;
-  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
 
 .mascot {
@@ -117,13 +81,21 @@ body {
     transform: translateX(-40px);
   }
 }
-@media screen and (min-width: 768px) {
-  .text,
-  .text2 {
-    font-size: 32px;
-    line-height: 20px;
+
+@media screen and (max-width: 600px) {
+  .mascot img {
+    width: 180px;
   }
 }
-li :hover {
-  color: #b1f8f2;
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .mascot img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .mascot img {
+    width: 424px;
+  }
 }

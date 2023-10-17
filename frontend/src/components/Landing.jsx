@@ -6,36 +6,20 @@ import mascot3 from "../assets/mascot3.png";
 
 const Landing = () => {
   return (
-    <>
-      <div className="logo">
-        <div className="main">
-          <div className="w-full h-auto max-w-screen-lg">
-            <img
-              src={catalysisImg}
-              height={505}
-              width={994}
-              alt="Logo"
-              className="logo-image "
-            />
-          </div>
-          <span className="text max-w-screen-lg mx-auto text-lg sm:text-xl md:text-2xl lg:text-3xl">
-            Technology at its Peak!
-          </span>
-          <br />
-          <br />
-          <br />
-          <div className="">
-            <p className="text2 max-w-screen-lg mx-auto text-lg sm:text-l md:text-2xl lg:text-3xl">
-              23-25th November
-            </p>
-          </div>
-        </div>
-
-        <div className="mascot ">
-          <img src={mascot3} height={481} width={424} alt="mascot" />
-        </div>
+    <div className="h-screen">
+      <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-72">
+        <img src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]" />
       </div>
-    </>
+      <div className="lg:pr-[20%] md:pr-[20%] pr-0">
+        <p className="text-[#8ac4e2] font-semibold lg:text-right lg:text-4xl md:text-right md:text-3xl text-center text-2xl">Technology at its peak!!</p>
+      </div>
+      <div className="pt-16">
+        <p className="text-[#E5F2FF] font-semibold text-center lg:text-5xl md:text-3xl text-3xl">23<sup>rd</sup> - 25<sup>th</sup> November</p>
+      </div>
+      <div className="mascot ">
+        <img src={mascot3} height={481} width={424} alt="mascot" />
+      </div>
+    </div>
   );
 };
 
