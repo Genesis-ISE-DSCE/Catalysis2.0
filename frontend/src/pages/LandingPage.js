@@ -11,7 +11,7 @@ import Sponsors from "../components/Sponsors";
 const LandingPage = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Landing />
             <About />
             <Events />
