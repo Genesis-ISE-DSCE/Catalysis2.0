@@ -41,18 +41,8 @@
   }
 }
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  position: absolute;
+.lanbody {
   width: 100%;
-  left: 0px;
-  top: 0px;
   background: radial-gradient(
     88.23% 154.15% at 53.75% 66.85%,
     #382749 0%,

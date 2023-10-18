@@ -16,7 +16,7 @@ const Contact = () => {
         position: 'relative'   
     };
     return(
-        <div id="Contact" className="bg-gradient-to-b from-[#29153D] to-[#000000] h-100 " style={bgImageStyle}  >
+        <div id="contact" className="bg-gradient-to-b from-[#29153D] to-[#000000] h-100 " style={bgImageStyle}  >
             <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl pt-12">Contact</h1>
             <footer className= "text-center text-white pb-6">
                 <div className="pt-9 flex justify-center mb-9">

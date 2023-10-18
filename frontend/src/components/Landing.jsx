@@ -6,7 +6,7 @@ import mascot3 from "../assets/mascot3.png";
 
 const Landing = () => {
   return (
-    <div className="h-screen">
+    <div id="landing" className="lanbody h-screen">
       <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-72">
         <img src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]" />
       </div>

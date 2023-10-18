@@ -2,7 +2,7 @@ import image from "../assets/2.png";
 
 const About = () => {
     return(
-        <div className="bg-gradient-to-b from-[#29153D] to-[#000000] lg:py-24 lg:px-40 md:py-9 md:px-16 py-5 px-5">
+        <div id="about" className="bg-gradient-to-b from-[#29153D] to-[#000000] lg:py-24 lg:px-40 md:py-9 md:px-16 py-5 px-5">
         <div className="font-bold text-[#E5F2FF] text-4xl md:text-4xl lg:text-5xl pt-12 pb-10 justfiy-left pl-2">
             About
         </div>
