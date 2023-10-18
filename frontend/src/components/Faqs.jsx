@@ -41,7 +41,7 @@ const Faqs = () => {
     };
 
     return (
-        <div className="py-16 w-full" style={{backgroundColor: "#29153D"}} id='faqs'>
+        <div id='faqs' className="py-16 w-full" style={{backgroundColor: "#29153D"}}>
             <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl mb-12">FAQ'S</h1>
             {accordionData.map((item, index) => {
                 return <div key={index} className="mb-4">

@@ -52,7 +52,7 @@ const events = [
 ]
 const Events = () => {
     return (
-        <div className={` ${styles['events-background']} min-h-screen block`} >
+        <div id='events' className={` ${styles['events-background']} min-h-screen block`} >
             <h1 className="font-bold text-[#E5F2FF] mb-8  py-[70px] text-center w-full leading-normal text-4xl md:text-4xl lg:text-5xl -tracking-normal">Events</h1>
             <div className='flex justify-center  flex-wrap w-full'>
                 <div className="text-white font-inter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 gap-10">

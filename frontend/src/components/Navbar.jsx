@@ -1,104 +1,89 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "../App.css";
+import React from "react";
 
 const Navbar = () => {
-  const [navItem, setNavItem] = useState("");
-
   const handleItemClick = (item) => {
-    setNavItem(item);
+    const element = document.getElementById(item);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <div>
-      <nav className="p-4">
-        <div className="container mx-auto flex justify-evenly items-center">
-          <ul className="flex  space-x-6">
+    <div className="fixed py-4">
+      <nav className="justify-center">
+          <ul className="flex space-x-8 ">
             <li className="nav-li">
-              <Link
-                to="/"
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "home"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
-                onClick={() => handleItemClick("home")}
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
+                onClick={() => handleItemClick("landing")}
               >
                 Home
-              </Link>
+              </button>
             </li>
 
             <li className="nav-li">
-              <Link
-                to="/about"
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "about"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
+              <button
+                className=" text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
                 onClick={() => handleItemClick("about")}
               >
                 About
-              </Link>
+              </button>
             </li>
 
             <li className="nav-li">
-              <Link
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "events"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
                 onClick={() => handleItemClick("events")}
-                to="/events"
               >
                 Events
-              </Link>
+              </button>
             </li>
 
             <li className="nav-li">
-              <Link
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "schedule"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
                 onClick={() => handleItemClick("schedule")}
-                to="/schedule"
               >
                 Schedule
-              </Link>
+              </button>
             </li>
 
             <li className="nav-li">
-              <Link
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "sponsors"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
+                onClick={() => handleItemClick("gallery")}
+              >
+                Gallery
+              </button>
+            </li>
+
+            <li className="nav-li">
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
                 onClick={() => handleItemClick("sponsors")}
-                to="/sponsors"
               >
                 Sponsors
-              </Link>
+              </button>
             </li>
 
             <li className="nav-li">
-              <Link
-                className={`text-2xl font-bold cursor-pointer ${
-                  navItem === "faqs"
-                    ? "text-custom-blue underline"
-                    : "text-custom-pink"
-                }`}
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
                 onClick={() => handleItemClick("faqs")}
-                to="/faqs"
               >
                 FAQs
-              </Link>
+              </button>
+            </li>
+
+            <li className="nav-li">
+              <button
+                className="text-[#F4D9D9] text-2xl font-bold cursor-pointer hover:text-[#B1F8F2] focus:text-[#B1F8F2] focus:underline"
+                onClick={() => handleItemClick("contact")}
+              >
+                Contact
+              </button>
             </li>
           </ul>
-        </div>
       </nav>
     </div>
   );
