@@ -89,3 +89,13 @@
     width: 424px;
   }
 }
+
+nav {
+  background: transparent;
+  transition: background 0.3s;
+}
+
+/* Styling when scrolled */
+nav.scrolled {
+  background: red;
+}
