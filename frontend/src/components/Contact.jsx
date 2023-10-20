@@ -3,7 +3,7 @@ import bgPattern from '../assets/bgpattern.jpg';
 import instaLogo from "../assets/instagramlogo.png";
 import linkedInLogo from "../assets/linkedinlogo.png";
 import mailLogo from "../assets/maillogo.png";
-const coc = require("../assets/docs/COC - HACKMAN.cbf71a14409997d58003.pdf");
+const coc = require("../assets/docs/Catalysis Code Of Conduct.pdf");
 
 
 const Contact = () => {
