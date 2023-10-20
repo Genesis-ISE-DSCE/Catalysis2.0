@@ -23,10 +23,6 @@ const Navbar = () => {
     }
   }
 
-  function onToggleMenu(e) {
-    e.name === "menu" ? e.name = "close" : e.name = "menu";
-  }
-
   return (
       <nav className="fixed top-0 left-0 right-0 bg-[#28143a] bg-opacity-80 flex justify-between items-center z-10 px-5 py-1 lg:py-1 h-8.2 lg:h-18">
         <div className="flex flex-wrap items-center justify-between mx-auto p-2 w-full md:w-auto">

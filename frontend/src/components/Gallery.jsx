@@ -42,16 +42,17 @@ const Gallery = () => {
 
   return (
     <div id="gallery" className="bg-gradient-to-b from-[#29153D] to-[#000000] ">
+        <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl pt-8">Gallery</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 mx-4">
         {images.map((image, index) => (
-          <div key={index} className="w-full p-2 border border-4 events_events-card__VuUy3  border-solid border-[#442F47] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 " >
+          <div key={index} className="w-full p-2 border-4 events_events-card__VuUy3  border-solid border-[#442F47] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 " >
             <div
               className="flex items-center justify-center cursor-pointer "
               onClick={() => openLightbox(image)}
             >
               <img
                 src={image}
-                alt={`Image ${index}`}
+                alt={`Catalysis ${index}`}
                 className="w-323.8 h-243.64"
               />
             </div>
@@ -68,7 +69,7 @@ const Gallery = () => {
     <div className="relative max-w-screen-md">
       <img
         src={lightboxImage}
-        alt="Lightbox Image"
+        alt="Lightbox Catalysis"
         className="max-w-full max-h-full"
       />
       <button
