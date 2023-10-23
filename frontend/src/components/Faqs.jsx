@@ -11,7 +11,7 @@ const Faqs = () => {
         },
         {
             title: 'When and where will the technical fest be held?',
-            content: 'The technical fest will be held between 20th to 25th of November in the department of ISE.',
+            content: 'The technical fest will be held between 23rd to 25th of November in the department of ISE.',
         },
         {
             title: 'What types of events and competitions will be held during the technical fest?',
