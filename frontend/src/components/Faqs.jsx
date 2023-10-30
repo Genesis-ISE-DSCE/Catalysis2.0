@@ -7,11 +7,11 @@ const Faqs = () => {
     const accordionData = [
         {
             title: 'What is Catalysis2.0?',
-            content: 'Catalysis is a 3 day interdepartmental technical fest organised by team Genesis of the Department of Information Science and Engineering.'
+            content: 'Catalysis is a 3-day interdepartmental technical fest organised by team Genesis of the Department of Information Science and Engineering.'
         },
         {
             title: 'When and where will the technical fest be held?',
-            content: 'The technical fest will be held between 23rd to 25th of November in the department of ISE.',
+            content: 'The technical fest will be held from the 23rd to the 25th of November in the department of ISE.',
         },
         {
             title: 'What types of events and competitions will be held during the technical fest?',
@@ -19,7 +19,7 @@ const Faqs = () => {
         },
         {
             title: 'Can non-IT branch students participate in the technical fest?',
-            content: 'Yes, students of all departments are welcome to participate in the technical fest.',
+            content: 'Yes, students of all departments of DSCE are welcome to participate in the technical fest.',
         },
         {
             title: 'Will there be any prizes for the winners of the competitions?',
