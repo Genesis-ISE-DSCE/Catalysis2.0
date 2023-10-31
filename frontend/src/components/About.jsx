@@ -1,4 +1,6 @@
 import image from "../assets/2.png";
+import imageavif from "../assets/2.avif"
+import imagewebp from "../assets/2.webp"
 
 const About = () => {
     return(
@@ -13,7 +15,11 @@ const About = () => {
                 Catalysis is an inter-department, extravagant 3-days tech fest, hosted by the ISE Department of Dayananda Sagar College of Engineering (DSCE), Bangalore. Catalysis aims to bring out the technical aspects in students by incorporating tech in various events going to be held through the whole of the fest. Through this event, we seek to help students demonstrate how technology integrates with other fields to help solve real-world problems and provide students with a platform to develop and showcase their tech skills.
             </div>
             <div className="lg:w-1/2 lg:flex lg:items-center lg:justify-center md:w-1/2 md:flex md:items-center md:justify-center flex items-center">
-                <img className="lg:block lg:w-[75%] md:w-[50%] w-auto" src={image} alt="Mascot" />
+                <picture className="lg:block lg:w-[75%] md:w-[50%] w-auto">
+                    <source type="image/avif" srcSet={imageavif}/>
+                    <source type="image/webp" srcSet={imagewebp}/>
+                    <img src={image} loading="lazy" alt="Mascot" />
+                </picture>
             </div>
         </div>
     </div>

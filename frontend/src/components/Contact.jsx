@@ -13,7 +13,7 @@ const Contact = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: 'w-scren',
-        position: 'relative'   
+        position: 'relative'  
     };
     return(
         <div id="contact" className="bg-gradient-to-b from-[#29153D] to-[#000000] h-100 " style={bgImageStyle}  >
@@ -21,15 +21,15 @@ const Contact = () => {
             <footer className= "text-center text-white pb-6">
                 <div className="pt-9 flex justify-center mb-9">
                     <a href="https://instagram.com/genesis.ise" target="_blank" class="mr-9" rel="noreferrer">
-                        <img src={instaLogo} alt="Logo" className = "h-14 pl-7"/>
+                        <img src={instaLogo} loading="lazy" alt="Logo" className = "h-14 pl-7"/>
                     </a>
                     <a href="https://www.linkedin.com/company/gensis-ise-dsce/" target="_blank"
                     class="mr-9" rel="noreferrer">
-                        <img src={linkedInLogo} alt="Logo" className = "h-14"/>
+                        <img src={linkedInLogo} loading="lazy" alt="Logo" className = "h-14"/>
                     </a>            
                     <a href="mailto:ise.genesis.dsce@gmail.com" target="_blank"
                     class="mr-9" rel="noreferrer">
-                        <img src={mailLogo} alt="Logo" className = "h-14"/>
+                        <img src={mailLogo} loading="lazy" alt="Logo" className = "h-14"/>
                     </a>
                 </div>
                 <div className ="text-center font-semibold py-2 text-[#ffffff]">Gagan: <a href="tel:9008243280">9008243280</a> | Tarana: <a href="tel:7483408791">7483408791</a></div>
