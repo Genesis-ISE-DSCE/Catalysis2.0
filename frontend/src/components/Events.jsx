@@ -61,7 +61,7 @@ const Events = () => {
                             return (
                                 <div className={` ${styles['events-card']} ${styles['card-shadow-effect']} rounded-lg  mb-24 relative w-[272px] min-h-[356px]`}>
                                     <div className='absolute flex w-full -top-24 justify-center'>
-                                        <img width={'183px'} alt={`img${key}`} className={`block left-[56px] ${styles['img-shadow-effect']} rounded-full `} src={element.img} />
+                                        <img loading="lazy" width={'183px'} alt={`img${key}`} className={`block left-[56px] ${styles['img-shadow-effect']} rounded-full `} src={element.img} />
                                     </div>
 
                                     <h1 className={`${styles['hover-underline-animation']} mx-4 mt-24 font-extrabold leading-normal text-xl`}>{element.heading}</h1>
