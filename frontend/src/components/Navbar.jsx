@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import catalysis from "../assets/catalysis.png";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const handleItemClick = (item) => {
@@ -55,6 +56,11 @@ const Navbar = () => {
           </li>
           <li>
             <button onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</button>
+          </li>
+          <li>
+            <Link to="/form">
+            <button onClick={() => handleItemClick("form")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Register</button>
+            </Link>
           </li>
         </ul>
       </div>
