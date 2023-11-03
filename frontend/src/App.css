@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.lanbody {
+  width: 100%;
+  background: radial-gradient(
+    88.23% 154.15% at 53.75% 66.85%,
+    #382749 0%,
+    #000000 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.mascot {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  margin-bottom: -10%;
+  margin-right: -5%;
+  rotate: -10deg;
+  animation: bounce 4s infinite;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mascot img {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .mascot img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .mascot img {
+    width: 424px;
+  }
+}
+
+nav {
+  background: transparent;
+  transition: background 0.3s;
+}
+
+/* Styling when scrolled */
+nav.scrolled {
+  background: red;
 }

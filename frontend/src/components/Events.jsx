@@ -1,5 +1,5 @@
+import styles from './styles/events.module.css';
 
-import styles from './styles/events.module.css'
 const events = [
     {
         img: require('../assets/valorant.png'),
@@ -52,8 +52,8 @@ const events = [
 ]
 const Events = () => {
     return (
-        <div className={` ${styles['events-background']} min-h-screen block`} >
-            <h1 className="text-white mb-5  py-[70px] text-center w-full font-extrabold leading-normal text-5xl -tracking-normal">Events</h1>
+        <div id='events' className={` ${styles['events-background']} min-h-screen block`} >
+            <h1 className="font-bold text-[#E5F2FF] mb-8  py-[70px] text-center w-full leading-normal text-4xl md:text-4xl lg:text-5xl -tracking-normal">Events</h1>
             <div className='flex justify-center  flex-wrap w-full'>
                 <div className="text-white font-inter grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 p-3 gap-10">
                     {
@@ -61,7 +61,7 @@ const Events = () => {
                             return (
                                 <div className={` ${styles['events-card']} ${styles['card-shadow-effect']} rounded-lg  mb-24 relative w-[272px] min-h-[356px]`}>
                                     <div className='absolute flex w-full -top-24 justify-center'>
-                                        <img width={'183px'} alt={`img${key}`} className={`block left-[56px] ${styles['img-shadow-effect']} rounded-full `} src={element.img} />
+                                        <img loading="lazy" width={'183px'} alt={`img${key}`} className={`block left-[56px] ${styles['img-shadow-effect']} rounded-full `} src={element.img} />
                                     </div>
 
                                     <h1 className={`${styles['hover-underline-animation']} mx-4 mt-24 font-extrabold leading-normal text-xl`}>{element.heading}</h1>
