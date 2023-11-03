@@ -1,6 +1,8 @@
 # Environment Variables
-```PORT = 8000
-DB_URI = mongodb://localhost:27017/catalysis```
+```
+PORT = 8000
+DB_URI = mongodb://localhost:27017/catalysis
+```
 
 # API Endpoints
 
