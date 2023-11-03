@@ -17,6 +17,7 @@ const Landing = React.lazy(()=>import('../components/Landing'));
 const Navbar = React.lazy(()=>import('../components/Navbar'));
 const Schedule = React.lazy(()=>import('../components/Schedule'));
 const Sponsors = React.lazy(()=>import('../components/Sponsors'));
+// const Registrations = React.lazy(()=>import('../components/Registrations'));
 
 const LandingPage = () => {
     return (
@@ -56,6 +57,10 @@ const LandingPage = () => {
             <Suspense fallback={<div>Loading...</div>}>
                 <Contact />
             </Suspense>    
+
+            {/* <Suspense fallback={<div>Loading...</div>}>
+                <Registrations />
+            </Suspense>     */}
                    
         </div>
     );
