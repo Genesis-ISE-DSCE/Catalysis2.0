@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import catalysis from "../assets/catalysis.png";
-import { Link , useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
+
   const handleItemClick = (item) => {
     const element = document.getElementById(item);
     if (element) {
@@ -36,34 +37,32 @@ const Navbar = () => {
       <div class={`w-full md:block md:w-auto ${isDropdownOpen ? 'block' : 'hidden'}`} id="navbar-default">
         <ul class="font-medium flex flex-col p-0 md:p-0 mt-4  md:flex-row lg:space-x-8 md:space-x-2 md:text-sm md:mt-0 md:border-0 ">
           <li>
-            <button onClick={() => handleItemClick("landing")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline" aria-current="page">Home</button>
+            <Link to="/#landing" onClick={() => handleItemClick("landing")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline" aria-current="page">Home</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("about")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">About</button>
+            <Link to="/#about" onClick={() => handleItemClick("about")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">About</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("events")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Events</button>
+            <Link to="/#events" onClick={() => handleItemClick("events")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Events</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("schedule")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Schedule</button>
+            <Link to="/#schedule" onClick={() => handleItemClick("schedule")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Schedule</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("gallery")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Gallery</button>
+            <Link to="/#gallery" onClick={() => handleItemClick("gallery")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Gallery</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("sponsors")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Sponsors</button>
+            <Link to="/#sponsors" onClick={() => handleItemClick("sponsors")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Sponsors</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("faqs")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Faq's</button>
+            <Link to="/#faqs" onClick={() => handleItemClick("faqs")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Faq's</Link>
           </li>
           <li>
-            <button onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</button>
+            <Link to="/#contact" onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</Link>
           </li>
-          <li>
-            <Link to="/form">
-            <button onClick={() => handleItemClick("form")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Register</button>
-            </Link>
-          </li>
+          {/* <li>
+            <Link to="/registration" onClick={() => handleItemClick("registration")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Register</Link>
+          </li> */}
         </ul>
       </div>
   </div>

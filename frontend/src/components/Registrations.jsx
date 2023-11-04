@@ -1,10 +1,18 @@
-// RegistrationForm.js
 import React, { useState } from 'react';
-import image from "../assets/2.png";
-import imageavif from "../assets/2.avif"
-import imagewebp from "../assets/2.webp"
+// import image from '../assets/2.png';
+// import imageavif from '../assets/2.avif';
+// import imagewebp from '../assets/2.webp';
+import bgImage from "../assets/registration-bg.png";
 
-const RegistrationForm = () => {
+function RegistrationForm() {
+
+  const bgImageStyle = {
+    backgroundImage: `url(${bgImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    width: 'w-scren',
+    position: 'relative'  
+};
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,6 +23,12 @@ const RegistrationForm = () => {
     usn: '',
   });
 
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleOptionChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -23,26 +37,169 @@ const RegistrationForm = () => {
     });
   };
 
+  // const handleTeammateInputChange = (teammate, e) => {
+  //   setFormData({
+  //     ...formData,
+  //     [teammate]: e.target.value,
+  //   });
+  // };
+
+  {/*const inputMappings = [
+    {
+      value: 'CodeRed',
+      inputFields: [
+        {
+          label: 'Teammate 2 Name:',
+          name: 'name2',
+          phone: 'Phone No. 2',
+        },
+        {
+          label: 'Teammate 3 Name:',
+          name: 'name3',
+          phone: 'Phone No. 3',
+        },
+        {
+          label: 'Teammate 4 Name:',
+          name: 'name4',
+          phone: 'Phone No. 4',
+        },
+        // {
+        //   phone: 'phone2',
+        // },
+        // {
+        //   phone: 'phone3',
+        // },
+        // {
+        //   phone: 'phone4',
+        // },
+      ],
+    },
+    {
+      value: 'Technical-Quiz',
+      inputFields: [
+        {
+          label: 'Teammate 2 Name:',
+          name: 'name2',
+          phone: 'Phone No. 2',
+        },
+        {
+          label: 'Teammate 3 Name:',
+          name: 'name3',
+          phone: 'Phone No. 3',
+        },
+        {
+          label: 'Teammate 4 Name:',
+          name: 'name4',
+          phone: 'Phone No. 4',
+        },
+      ],
+    },
+    {
+      value: 'CodingRelayRace',
+      inputFields: [
+        {
+          label: 'Teammate 2 Name:',
+          name: 'name2',
+          phone: 'Phone No. 2',
+        },
+        {
+          label: 'Teammate 3 Name:',
+          name: 'name3',
+          phone: 'Phone No. 3',
+        },
+        {
+          label: 'Teammate 4 Name:',
+          name: 'name4',
+          phone: 'Phone No. 4',
+        },
+      ],
+    },
+    {
+      value: 'Technoseek',
+      inputFields: [
+        {
+          label: 'Teammate 2 Name:',
+          name: 'name2',
+          phone: 'Phone No. 2',
+        },
+        {
+          label: 'Teammate 3 Name:',
+          name: 'name3',
+          phone: 'Phone No. 3',
+        },
+        {
+          label: 'Teammate 4 Name:',
+          name: 'name4',
+          phone: 'Phone No. 4',
+        },
+      ],
+    },
+  ];
+  */}
+
+  {/*const renderConditionalInputs = () => {
+    const selectedMapping = inputMappings.find((mapping) => mapping.value === selectedOption);
+
+    if (selectedMapping) {
+      return selectedMapping.inputFields.map((field, index) => (
+        <>
+        <div key={index} className="mb-4">
+          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor={field.name}>
+            {field.label}
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            id={field.name}
+            name={field.name}
+            placeholder={`Teammate Name `}
+            value={formData[field.name]}
+            onChange={(e) => handleTeammateInputChange(field.name, e)}
+            required
+          />
+        </div>
+        <div key={index} className="mb-4">
+          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor={field.phone}>
+            {field.phone}
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="number"
+            id={field.phone}
+            name={field.phone}
+            placeholder={`Teammate Ph Number`}
+            value={formData[field.phone]}
+            onChange={(e) => handleTeammateInputChange(field.phone, e)}
+            required
+          />
+        </div>
+       </>
+      ));
+    }
+
+    return null;
+  };*/}
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here, e.g., send the data to a server.
     console.log(formData);
   };
 
   return (
-    <div className="flex justify-center items-center h-max relative " style={{backgroundColor: "#29153D"}}>
-       <div className="absolute top-0 left-0 w-1/4 mt-16 ">
-      <picture>
-        <source type="image/avif" srcSet={imageavif} />
-        <source type="image/webp" srcSet={imagewebp} />
-        <img src={image} loading="lazy" alt="Mascot" className="w-48 h-auto" /> {/* Increase the size as needed */}
-      </picture>
-    </div>
-      <form className="bg-white shadow-md rounded px-14 pt-6 pb-8 mb-4 mt-5" style={{backgroundColor: "#21083b"}} onSubmit={handleSubmit}>
-      <h2 className="text-2xl font-bold text-center mb-4 text-white">Registration Form</h2>
+    <div className="flex justify-center items-center relative h-screen " style={bgImageStyle}>
+      {/* <div className="absolute top-0 left-28 w-1/4 mt-16 ml-12">
+        <picture>
+          <source type="image/avif" srcSet={imageavif} />
+          <source type="image/webp" srcSet={imagewebp} />
+          <img src={image} loading="lazy" alt="Mascot" className="w-56 h-auto transform scale-x-[-1]" />
+        </picture>
+      </div> */}
+      <form className="shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 mt-16 lg:w-[40%]" onSubmit={handleSubmit}>
+        <h2 className="text-4xl font-bold text-center mb-8 text-white">Registration Form</h2>
+
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="name">
-            Name
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="name">
+            Name:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -55,9 +212,10 @@ const RegistrationForm = () => {
             required
           />
         </div>
+
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="email">
-            Email
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="email">
+            Email:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -70,43 +228,55 @@ const RegistrationForm = () => {
             required
           />
         </div>
+
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="email">
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="phone">
             Phone Number:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="number"
-            id="number"
-            name="number"
+            id="phone"
+            name="phone"
             placeholder="Your Phone No.(Whatsapp)"
             value={formData.phone}
             onChange={handleChange}
             required
           />
         </div>
+
+        {/* Other input fields */}
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="name">
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="email">
             Event Name:
+          </label>
+          <select
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="dropdown"
+            name="dropdown"
+            value={selectedOption}
+            onChange={handleOptionChange}
+          >
+            <option value="" disabled>Select Event</option>
+            <option value="PromptDesigner">Prompt Designer</option>
+            <option value="TechnicalQuiz">Technical Quiz (Team Event)</option>
+            <option value="LectureSeries(Workshop)">Lecture Series (Workshop)</option>
+            <option value="DSASmackDown">DSA SmackDown</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="CodeRed">CodeRed (Team Event)</option>
+            <option value="Technoseek">Technoseek (Team Event)</option>
+            <option value="CodingRelayRace">Coding Relay Race (Team Event)</option>
+          </select>
+        </div>
+
+        {/* {renderConditionalInputs()} */}
+        <div className="mb-4">
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="usn">
+            USN:
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
-            id="event"
-            name="event"
-            placeholder="Name of the event"
-            value={formData.event}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="email">
-           USN:
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="number"
             id="usn"
             name="usn"
             placeholder="Your USN"
@@ -115,39 +285,55 @@ const RegistrationForm = () => {
             required
           />
         </div>
+
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="email">
-           Semester:
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="sem">
+            Semester:
           </label>
-          <input
+          <select
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="number"
             id="sem"
             name="sem"
-            placeholder="Your Semester"
             value={formData.sem}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="" disabled>Select your semester</option>
+            <option value="1">Semester 1</option>
+            <option value="3">Semester 3</option>
+            <option value="5">Semester 5</option>
+            <option value="7">Semester 7</option>
+          </select>
         </div>
+
         <div className="mb-4">
-          <label className="block text-[#F4D9D9] text-sm font-bold mb-2" htmlFor="name">
-            Branch
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="branch">
+            Branch:
           </label>
-          <input
+          <select
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
             id="branch"
             name="branch"
-            placeholder="Your Branch"
             value={formData.branch}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="" disabled>Select your branch</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Science">Information Science</option>
+            <option value="Electronics and Communication">Electronics and Communication</option>
+            <option value="Mechanical Engineering">Artificial Intelligence and ML</option>
+            <option value="Electrical and Electronics">Computer Science and Design</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+            <option value="Aeronautical Engineering">Others</option>
+            {/* Add more branches as needed */}
+          </select>
         </div>
-        <div className="flex items-center justify-between">
+
+        <div className="flex items-center justify-end pt-4">
           <button
-            className="bg-blue-500 hover:bg-grey text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="bg-[#590793] hover:bg-[#7705ff] text-xl text-white font-bold py-2 px-4 rounded focus:text-2xl focus:shadow-outline"
             type="submit"
           >
             Register
@@ -156,6 +342,19 @@ const RegistrationForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default RegistrationForm;
+
+{/* <div className="absolute top-0 left-28 w-1/4 mt-16 ml-12">
+        <picture>
+          <source type="image/avif" srcSet={imageavif} />
+          <source type="image/webp" srcSet={imagewebp} />
+          <img src={image} loading="lazy" alt="Mascot" className="w-56 h-auto transform scale-x-[-1]" />
+        </picture>
+      </div> */}
+
+
+// import image from '../assets/2.png';
+// import imageavif from '../assets/2.avif';
+// import imagewebp from '../assets/2.webp';

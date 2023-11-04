@@ -22,9 +22,9 @@ const Sponsors = React.lazy(()=>import('../components/Sponsors'));
 const LandingPage = () => {
     return (
         <div>
-            <Suspense fallback={<div>Loading...</div>}>
+            {/* <Suspense fallback={<div>Loading...</div>}>
                 <Navbar />
-            </Suspense> 
+            </Suspense>  */}
 
             <Suspense fallback={<div>Loading...</div>}>
                 <Landing />
