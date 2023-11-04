@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+
 engineering_departments = [
     "Aeronautical Engineering",
     "Automobile Engineering",
@@ -51,11 +52,7 @@ const userSchema = new mongoose.Schema({
         enum:engineering_departments,
         required:true
     },
-    events:[
-        {
-            type:String
-        }
-    ]
+
 },{
     timestamps:true
 });
