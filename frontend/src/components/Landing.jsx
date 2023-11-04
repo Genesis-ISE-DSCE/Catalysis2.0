@@ -4,6 +4,7 @@ import catalysisImg from "../assets/catalysis.png";
 import mascot3 from "../assets/mascot3.png";
 import mascot3avif from "../assets/mascot3.avif";
 import mascot3webp from "../assets/mascot3.webp";
+import { Link } from "react-router-dom";
 
 
 const Landing = () => {
@@ -18,8 +19,11 @@ const Landing = () => {
         <p className="text-[#8ac4e2] font-semibold lg:text-right lg:text-4xl md:text-right md:text-3xl text-center text-2xl">Technology at its peak!!</p>
       </div>
       <div className="pt-16">
-        <p className="text-[#E5F2FF] font-semibold text-center lg:text-5xl md:text-3xl text-3xl">23<sup>rd</sup> - 25<sup>th</sup> November</p>
+        <p className="text-[#E5F2FF] font-semibold text-center lg:text-4xl md:text-3xl text-3xl">20<sup>th</sup> - 22<sup>nd</sup> December</p>
       </div>
+      <Link to="/registration">
+        <button className="tagline flex text-white text-4xl mx-auto">Register Now</button>
+      </Link>
       <div className="mascot ">
         <picture height={481} width={424} alt="mascot" >
            <source type = "image/avif" srcSet={mascot3avif}/>

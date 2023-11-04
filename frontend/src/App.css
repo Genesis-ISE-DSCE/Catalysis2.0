@@ -99,3 +99,39 @@ nav {
 nav.scrolled {
   background: red;
 }
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.popup button {
+  background-color: #c175ff;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  float: right;
+  cursor: pointer;
+  justify-content: right;
+}
+
+.lanbody .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 16px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 16px;
+  margin-top: 40px;
+  border-radius: 1px;
+  transition: transform 0.2s;
+}
+
+.lanbody .tagline:hover {
+  transform: translate(5px, 5px);
+}
