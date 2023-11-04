@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import catalysis from "../assets/catalysis.png";
-import { Link } from 'react-router-dom';
+import { Link , useNavigate } from 'react-router-dom';
+
 
 const Navbar = () => {
   const handleItemClick = (item) => {
@@ -8,6 +9,7 @@ const Navbar = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+   
   };
 
   const [navIcon, setNavIcon] = useState("menu");
