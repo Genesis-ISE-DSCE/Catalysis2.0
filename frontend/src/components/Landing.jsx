@@ -12,7 +12,7 @@ const Landing = () => {
 
   return (
     <div id="landing" className="lanbody h-screen">
-      <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-72">
+      <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-56">
           <img fetchpriority = "high" src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]"/>       
       </div>
       <div className="lg:pr-[20%] md:pr-[20%] pr-0">
@@ -22,7 +22,7 @@ const Landing = () => {
         <p className="text-[#E5F2FF] font-semibold text-center lg:text-4xl md:text-3xl text-3xl">20<sup>th</sup> - 22<sup>nd</sup> December</p>
       </div>
       <Link to="/registration">
-        <button className="tagline flex text-white text-4xl mx-auto">Register Now</button>
+        <button className="tagline flex text-white lg:text-4xl md:text-3xl text-xl mx-auto">Register Now</button>
       </Link>
       <div className="mascot ">
         <picture height={481} width={424} alt="mascot" >
