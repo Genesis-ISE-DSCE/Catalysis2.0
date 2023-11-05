@@ -4,7 +4,9 @@ const app = express();
 const connectDB = require("./database/connect");
 const registerRoute = require('./routes/registerRoute');
 require('dotenv').config();
+const cors = require("cors");
 
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1/', registerRoute);
