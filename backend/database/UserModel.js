@@ -1,5 +1,16 @@
 const mongoose = require('mongoose')
-engineering_departments = [
+
+const events = [
+ "Prompt Designer",
+"Technical Quiz",
+ "Lecture Series (Workshop)",
+ "DSA SmackDown",
+ "UI/UX Design",
+ "CodeRed",
+ "Technoseek",
+ "Coding Relay Race",
+]
+const engineering_departments = [
     "Aeronautical Engineering",
     "Automobile Engineering",
     "Biotechnology",
@@ -51,12 +62,12 @@ const userSchema = new mongoose.Schema({
         enum:engineering_departments,
         required:true
     },
-    events:[
-        {
-            type:String
+    event:{
+            type:String,
+            enum:events
         }
-    ]
-},{
+
+    },{
     timestamps:true
 });
 const user = mongoose.model('User', userSchema)
