@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 const events = [
-    "Prompt Designer",
-    "Technical Quiz",
-    "Lecture Series(Workshop)",
-    "DSA SmackDown",
-    "UI/UX Design",
+    "PromptDesigner",
+    "TechnicalQuiz",
+    "LectureSeries(Workshop)",
+    "DSASmackDown",
+    "UI/UXDesign",
     "CodeRed",
     "Technoseek",
-    "Coding Relay Race",
+    "CodingRelayRace",
 ];
 
 const engineering_departments = [

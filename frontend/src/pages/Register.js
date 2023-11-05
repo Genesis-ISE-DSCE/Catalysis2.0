@@ -3,6 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import bgImage from "../assets/registration-bg.png";
 import logo from "../assets/logo.png";
 import "../App.css";
+import Axios from "axios";
 const coc = require("../assets/docs/Catalysis Code Of Conduct.pdf");
 
 function RegistrationForm() {
@@ -11,13 +12,14 @@ function RegistrationForm() {
   const [isChecked, setIsChecked] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [formErrors, setFormErrors] = useState({});
+  const [showError, setShowError] = useState('');
 
   const bgImageStyle = {
     backgroundImage: `url(${bgImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
-    position: 'relative'  
+    position: 'relative'
   };
 
   const [formData, setFormData] = useState({
@@ -41,14 +43,27 @@ function RegistrationForm() {
     setIsChecked(!isChecked);
   };
 
+  function handleOkError() {
+    setShowError('');
+  }
+
   function handleClick(event) {
     event.preventDefault();
     
     if(isChecked) {
       setFormErrors(validate(formData));
       if(Object.keys(validate(formData)).length===0) {
-        console.log(formData);
-        setShowPopup(true);
+        // http://localhost:5000/api/v1/register
+        Axios.post("https://catalysis2-0-backend.onrender.com/api/v1/register",formData)
+        .then((res)=>{
+          const response = res.data;
+          console.log(response);
+          setShowPopup(true);
+          })
+        .catch((err)=>{
+          console.log(err);
+          setShowError(err);
+        })
       }
     }
   }
@@ -162,7 +177,7 @@ function RegistrationForm() {
             <option value="TechnicalQuiz">Technical Quiz (Team Event)</option>
             <option value="LectureSeries(Workshop)">Lecture Series (Workshop)</option>
             <option value="DSASmackDown">DSA SmackDown</option>
-            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="UI/UXDesign">UI/UX Design</option>
             <option value="CodeRed">CodeRed (Team Event)</option>
             <option value="Technoseek">Technoseek (Team Event)</option>
             <option value="CodingRelayRace">Coding Relay Race (Team Event)</option>
@@ -199,11 +214,15 @@ function RegistrationForm() {
             onChange={handleChange}
             required
           >
-            <option value="" disabled>Select your semester</option>
+            <option value="" disabled>Select Semester</option>
             <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
             <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
             <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
             <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
           </select>
           <p className="text-red-600">{formErrors.semester}</p>
         </div>
@@ -220,14 +239,30 @@ function RegistrationForm() {
             onChange={handleChange}
             required
           >
-            <option value="" disabled>Select your branch</option>
-            <option value="Computer Science">Computer Science</option>
-            <option value="Information Science">Information Science</option>
-            <option value="Electronics and Communication">Electronics and Communication</option>
-            <option value="Mechanical Engineering">Artificial Intelligence and ML</option>
-            <option value="Electrical and Electronics">Computer Science and Design</option>
-            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="" disabled>Select Branch</option>
             <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+            <option value="Automobile Engineering">Automobile Engineering</option>
+            <option value="Biotechnology">Biotechnology</option>
+            <option value="Chemical Engineering">Chemical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+            <option value="Electrical & Electronics Engineering">Electrical & Electronics Engineering</option>
+            <option value="Electronics & Communication Engineering">Electronics & Communication Engineering</option>
+            <option value="Electronics & Instrumentation Engineering">Electronics & Instrumentation Engineering</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Medical Electronics Engineering">Medical Electronics Engineering</option>
+            <option value="Electronics & Telecommunication Engineering">Electronics & Telecommunication Engineering</option>
+            <option value="Artificial Intelligence & Machine Learning">Artificial Intelligence & Machine Learning</option>
+            <option value="Information Science & Engineering">Information Science & Engineering</option>
+            <option value="Master of Business Administration">Master of Business Administration</option>
+            <option value="Master of Computer Applications">Master of Computer Applications</option>
+            <option value="Mathematics Department">Mathematics Department</option>
+            <option value="Physics Department">Physics Department</option>
+            <option value="Chemistry Department">Chemistry Department</option>
+            <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+            <option value="Computer Science and Business Systems">Computer Science and Business Systems</option>
+            <option value="Computer Science Engineering (Cyber Security)">Computer Science Engineering (Cyber Security)</option>
+            <option value="Computer Science Engineering (Data Science)">Computer Science Engineering (Data Science)</option>
+            <option value="Computer Science and Design">Computer Science and Design</option>
             <option value="Aeronautical Engineering">Others</option>
             {/* Add more branches as needed */}
           </select>
@@ -259,6 +294,20 @@ function RegistrationForm() {
           </div>
           <div className='lg:pt-20 lg:pb-8 md:pt-16 md:pb-6 pt-2 pr-4'>
             <button onClick={handleOk} className="lg:text-xl shadow hover:bg-[#490595] hover:text-white focus:shadow-outline focus:outline-none text-black font-bold py-2 px-8 rounded text-sm" type="button">
+              OK
+            </button>
+          </div>
+        </div>
+      )}
+
+      {showError && (
+        <div className="popup bg-[#381851] lg:w-[540px] lg:pt-8 md:w-[480px] md:pt-8 w-[320px] pt-0 rounded-2xl">
+            <img className="lg:float-left lg:w-48 lg:h-auto md:float-left md:w-40 md:h-auto justify-center w-20 h-auto" src={logo} alt="Registration eva" />
+            <div>
+            <p className="font-poppins mb-4 lg:text-2xl md:text-xl text-sm text-red-500 text-center">You have already registered for this event!!</p>
+          </div>
+          <div className='lg:pt-20 lg:pb-8 md:pt-16 md:pb-6 pt-2 pr-4'>
+            <button onClick={handleOkError} className="lg:text-xl shadow hover:bg-[#490595] hover:text-white focus:shadow-outline focus:outline-none text-black font-bold py-2 px-8 rounded text-sm" type="button">
               OK
             </button>
           </div>
