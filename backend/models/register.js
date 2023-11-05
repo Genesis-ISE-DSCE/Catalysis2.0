@@ -1,15 +1,16 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
 const events = [
- "Prompt Designer",
-"Technical Quiz",
- "Lecture Series (Workshop)",
- "DSA SmackDown",
- "UI/UX Design",
- "CodeRed",
- "Technoseek",
- "Coding Relay Race",
-]
+    "Prompt Designer",
+    "Technical Quiz",
+    "Lecture Series(Workshop)",
+    "DSA SmackDown",
+    "UI/UX Design",
+    "CodeRed",
+    "Technoseek",
+    "Coding Relay Race",
+];
+
 const engineering_departments = [
     "Aeronautical Engineering",
     "Automobile Engineering",
@@ -33,9 +34,11 @@ const engineering_departments = [
     "Computer Science and Business Systems",
     "Computer Science Engineering (Cyber Security)",
     "Computer Science Engineering (Data Science)",
-    "Computer Science and Design"
+    "Computer Science and Design",
+    "Others"
 ];
-const userSchema = new mongoose.Schema({
+
+const registrationSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -44,31 +47,31 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    phoneNumber: {
+    phone: {
         type: String,
-        required:true
+        required: true
     },
-    emailId: {
+    email: {
         type: String,
         required: true
     },
     semester:{
-        type:Number,
-        required:true,
-        enum:[1,2,3,4,5,6,7,8]
+        type: Number,
+        required: true,
+        enum: [1,2,3,4,5,6,7,8]
     },
     branch:{
-        type:String,
-        enum:engineering_departments,
-        required:true
+        type: String,
+        enum: engineering_departments,
+        required: true
     },
     event:{
-            type:String,
-            enum:events
-        }
-
-    },{
+            type: String,
+            enum: events
+    }
+},
+{
     timestamps:true
 });
-const user = mongoose.model('User', userSchema)
-module.exports = { user }
+
+module.exports =  mongoose.model('Registration', registrationSchema);
