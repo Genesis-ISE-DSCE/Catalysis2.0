@@ -1,35 +1,71 @@
-const {user} = require('../database/UserModel')
+const Registration = require("../models/register");
+
 const register = async (req, res) => {
     try {
-        const { name, usn, phoneNumber, emailId, semester, branch, event } = req.body;
-        const preExistingRegisteration = await user.findOne({
-            usn,event
-        }); //fetches any pre registered entries in the db
+        console.log(req.body);
+        const { name, usn, phone, email, semester, branch, event } = req.body;
+
+        const preExistingRegisteration = await Registration.findOne({ usn, event });
+        console.log(preExistingRegisteration);
         
-        if(preExistingRegisteration){ //if its done then restrict 
-            return res.json({
-                msg:'user already registered for this event',
-                success:false
-            })
+        if(preExistingRegisteration){
+            return res.status(400).json({
+                msg: 'You have already registered for this event',
+                success: false
+            });
         }
-        const newRegisteration = new user({
-            name, usn, phoneNumber, emailId, semester, branch, event
-        })
+        const newRegisteration = await Registration.create(req.body);
         
-        await newRegisteration.save(); 
-        res.status(201).json({
-            msg:'user created',
-            success:true
-        })
+        res.status(201).json({ newRegisteration });
     }
     catch (error) {
         res.status(400).json({
-            msg:'something went wrong',
-            error:error,
-            success:false
-        })
+            msg: 'Something went Wrong!!',
+            error: error,
+            success: false
+        });
     }
 }
+
+const getRegistrations = async (req, res) => {
+    try {
+        const registrations = await Registration.find({});
+        res.status(200).json({ registrations });
+    } 
+    catch (error) {
+        res.status(500).json({
+            msg: 'Something went Wrong!!',
+            error: error,
+            success: false
+        });
+    }
+}
+
+const getEventDetails = async (req, res) => {
+    try {
+        console.log(req.query);
+        const { category } = req.query;
+
+        let allEvent;
+        if (category) {
+            allEvent = await Registration.find({ event: category });
+        } else {
+            allEvent = await Registration.find({});
+        }
+
+        res.status(200).json({ allEvent });
+    }
+    catch (error) {
+        res.status(500).json({
+            msg: 'Something went Wrong!!',
+            error: error,
+            success: false
+        });
+    }
+}
+
 module.exports = {
-    register
+    register,
+    getRegistrations,
+    getEventDetails
 }
