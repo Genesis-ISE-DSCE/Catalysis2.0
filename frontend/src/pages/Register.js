@@ -13,6 +13,7 @@ function RegistrationForm() {
   const [showPopup, setShowPopup] = useState(false);
   const [formErrors, setFormErrors] = useState({});
   const [showError, setShowError] = useState('');
+  const [isCheckboxTouched, setIsCheckboxTouched] = useState(false);
 
   const bgImageStyle = {
     backgroundImage: `url(${bgImage})`,
@@ -30,6 +31,7 @@ function RegistrationForm() {
     semester: '',
     branch: '',
     usn: '',
+    transactionId: ''
   });
 
   const handleChange = (event) => {
@@ -40,8 +42,13 @@ function RegistrationForm() {
   };
 
   const handleCheckboxChange = () => {
+    setIsCheckboxTouched(true);
     setIsChecked(!isChecked);
   };
+
+  // const handleCheckboxChange = () => {
+  //   setIsChecked(!isChecked);
+  // };
 
   function handleOkError() {
     setShowError('');
@@ -65,6 +72,9 @@ function RegistrationForm() {
           setShowError(err);
         })
       }
+    }
+    else {
+      setIsCheckboxTouched(true);
     }
   }
 
@@ -100,6 +110,9 @@ function RegistrationForm() {
     }
     if(!formData.usn){
       errors.usn = "USN is required!!";
+    }
+    if(!formData.transactionId){
+      errors.transactionId = "Tranasaction Id is required!!";
     }
     return errors;
   }
@@ -263,18 +276,50 @@ function RegistrationForm() {
             <option value="Computer Science Engineering (Cyber Security)">Computer Science Engineering (Cyber Security)</option>
             <option value="Computer Science Engineering (Data Science)">Computer Science Engineering (Data Science)</option>
             <option value="Computer Science and Design">Computer Science and Design</option>
-            <option value="Aeronautical Engineering">Others</option>
-            {/* Add more branches as needed */}
+            <option value="Others">Others</option>
           </select>
           <p className="text-red-600">{formErrors.branch}</p>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="transactionId">
+            Transaction ID:
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            id="transactionId"
+            name="transactionId"
+            placeholder="Enter Transaction ID"
+            value={formData.transactionId || ""}
+            onChange={handleChange}
+            required
+          />
+          <p className="text-red-600">{formErrors.transactionId}</p>
+        </div>
+
+        <div className="mb-4">
+          <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="transactionImg">
+            Upload Tranasaction Image:
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-slate-100 leading-tight focus:outline-none focus:shadow-outline"
+            type="file"
+            id="transactionImg"
+            name="transactionImg"
+            placeholder=""
+            required
+          />
+          <p className="text-red-600">{formErrors.transactionImg}</p>
         </div>
 
         <div className='pb-4'>
           <input type="checkbox" className='form-checkbox text-[#22C3FF]' id='agree' checked={isChecked} onChange={handleCheckboxChange}/>
           <label className='text-[#D4DFC7] pl-2 justify-center'>By registering you agree to our <a href={coc} rel='noreferrer noopener' target="_blank" className='text-purple-300'>Code of Conduct</a></label>
+          {isCheckboxTouched && !isChecked && <p className='text-red-600'>Required*</p>}
         </div>
 
-        <div className="flex items-center justify-end pt-4">
+        <div className="flex items-center justify-end pt-4 pb-16">
           <button
             onClick={handleClick}
             className="bg-[#590793] hover:bg-[#490595] text-xl text-white font-bold py-2 px-4 rounded focus:shadow-outline"

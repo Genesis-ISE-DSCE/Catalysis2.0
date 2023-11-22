@@ -16,10 +16,10 @@ const Landing = () => {
           <img fetchpriority = "high" src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]"/>       
       </div>
       <div className="lg:pr-[20%] md:pr-[20%] pr-0">
-        <p className="text-[#8ac4e2] font-semibold lg:text-right lg:text-4xl md:text-right md:text-3xl text-center text-2xl">Technology at its peak!!</p>
+        <p className="text-[#8ac4e2] font-semibold lg:text-right lg:text-4xl md:text-right md:text-3xl text-center text-2xl">Technology at its Peak! 🚀</p>
       </div>
       <div className="pt-16">
-        <p className="text-[#E5F2FF] font-semibold text-center lg:text-4xl md:text-3xl text-3xl">20<sup>th</sup> - 22<sup>nd</sup> December</p>
+        <p className="text-[#E5F2FF] font-semibold text-center lg:text-4xl md:text-3xl text-3xl">18<sup>th</sup> - 20<sup>th</sup> December</p>
       </div>
       <Link to="/registration">
         <button className="tagline flex text-white lg:text-4xl md:text-3xl text-xl mx-auto">Register Now</button>

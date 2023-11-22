@@ -3,50 +3,50 @@ import styles from './styles/events.module.css';
 const events = [
     {
         img: require('../assets/valorant.png'),
-        heading: 'Code Red',
-        content: 'A global competitive e-sports tournament series for the video game Valorant.',
+        heading: 'Prompt Designer',
+        content: 'Experience esports excellence in our Valorant Championship, where elite teams compete for strategic supremacy and ultimate glory.',
         rules: ''
     },
     {
         img: require('../assets/codeJam.png'),
-        heading: 'Coding Jam',
-        content: 'Coding contest in which participants solve algorithmic problems using a programming language, with the goal of achieving the highest performance.',
+        heading: 'Technical Quiz',
+        content: 'Elevate your intellect in our Technical Quiz, where minds collide in a battle of knowledge, testing prowess in the intricate realms of technology and innovation.',
         rules: ''
     },
     {
         img: require('../assets/whatsThePoint.png'),
-        heading: 'What’s the Point?',
-        content: 'A competition in which teams of students discuss a subject, and the team that makes the best arguments wins.',
+        heading: 'Lecture Series',
+        content: 'Dive into our Lecture Series, a knowledge-rich forum where experts illuminate diverse fields, fostering intellectual exploration and insights.',
         rules: ''
     },
     {
         img: require('../assets/innovator.png'),
-        heading: 'Innovator',
-        content: 'Similar to Just a Minute (JAM). Students will be given two technologies and they will be asked to suggest possible real-life applications using both the technologies.',
+        heading: 'DSA Smackdown',
+        content: 'A rigorous test of algorithmic proficiency and problem-solving acumen, where participants navigate complex data structures and algorithms to showcase their computational finesse.',
         rules: ''
     },
     {
         img:require('../assets/callToLaunch.png'),
-        heading:'Call to Launch',
-        content:'A contest where participants present their entrepreneurial skills, and business concepts to a panel in the hope of winning investment capital.',
+        heading:'UI/UX Design',
+        content:'Enter the UI/UX Design Competition, where creativity meets functionality in a showcase of design brilliance and user-centric innovation.',
         rules:''
     },
     {
         img:require('../assets/airCrash.png'),
-        heading:'Air Crash',
-        content:'An event where participants represent famous people of the tech industry and convincingly persuade the judges that they are the most imperative in business and deserving of a parachute.',
+        heading:'CodeRed',
+        content: 'Experience esports excellence in our Valorant Championship, where elite teams compete for strategic supremacy and ultimate glory.',
         rules:''
     },
     {
         img:require('../assets/TechnoSeek.png'),
         heading:'TechnoSeek',
-        content:'Inspired by Cicada 3301, TechnoSeek is a technical treasure hunt and has elements of a life-size CTF.',
+        content:'Unleash your tech prowess in our Treasure Hunt—an exhilarating journey through cryptic challenges and hidden knowledge, where wit leads to victory.',
         rules:''
     },
     {
         img:require('../assets/quizUp.png'),
-        heading:'Quiz-Up',
-        content:'A contest in which a team of participants tests what they know by answering questions on the topics.',
+        heading:'Coding Relay Race',
+        content:'',
         rules:''
     }
 ]
