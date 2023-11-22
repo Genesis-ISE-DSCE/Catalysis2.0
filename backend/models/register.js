@@ -57,8 +57,8 @@ const registrationSchema = new mongoose.Schema({
     },
     semester:{
         type: Number,
-        required: true,
-        enum: [1,2,3,4,5,6,7,8]
+        enum: [1,2,3,4,5,6,7,8],
+        required: true
     },
     branch:{
         type: String,
@@ -66,9 +66,15 @@ const registrationSchema = new mongoose.Schema({
         required: true
     },
     event:{
-            type: String,
-            enum: events
+        type: String,
+        enum: events,
+        required: true
+    },
+    transactionId:{
+        type: String,
+        required: true
     }
+
 },
 {
     timestamps:true
