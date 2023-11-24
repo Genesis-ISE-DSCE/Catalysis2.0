@@ -4,7 +4,7 @@ import bgImage from "../assets/registration-bg.png";
 import logo from "../assets/logo.png";
 import "../App.css";
 import Axios from "axios";
-const coc = require("../assets/docs/Catalysis Code Of Conduct.pdf");
+const coc = require("../assets/docs/Code Of Conduct.pdf");
 
 function RegistrationForm() {
 
