@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from './styles/events.module.css';
 
 const events = [
@@ -11,51 +12,54 @@ const events = [
         img: require('../assets/codeJam.png'),
         heading: 'Technical Quiz',
         content: 'Elevate your intellect in our Technical Quiz, where minds collide in a battle of knowledge, testing prowess in the intricate realms of technology and innovation.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/Technical Quiz Rulebook.pdf")
     },
     {
         img: require('../assets/whatsThePoint.png'),
         heading: 'Lecture Series',
         content: 'Dive into our Lecture Series, a knowledge-rich forum where experts illuminate diverse fields, fostering intellectual exploration and insights.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/Code Of Conduct.pdf")
     },
     {
         img: require('../assets/innovator.png'),
         heading: 'DSA Smackdown',
         content: 'A rigorous test of algorithmic proficiency and problem-solving acumen, where participants navigate complex data structures and algorithms to showcase their computational finesse.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/DSA Smackdown Rulebook.pdf")
     },
     {
         img:require('../assets/callToLaunch.png'),
         heading:'UI/UX Design',
         content:'Enter the UI/UX Design Competition, where creativity meets functionality in a showcase of design brilliance and user-centric innovation.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/UI:UX Design Rulebook.pdf")
     },
     {
         img:require('../assets/airCrash.png'),
         heading:'CodeRed',
         content: 'Experience esports excellence in our Valorant Championship, where elite teams compete for strategic supremacy and ultimate glory.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/CodeRed Rulebook.pdf")
     },
     {
         img:require('../assets/TechnoSeek.png'),
         heading:'TechnoSeek',
         content:'Unleash your tech prowess in our Treasure Hunt—an exhilarating journey through cryptic challenges and hidden knowledge, where wit leads to victory.',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/TechnoSeek Rulebook.pdf")
     },
     {
         img:require('../assets/quizUp.png'),
         heading:'Coding Relay Race',
         content:'',
-        rules: require("../assets/docs/Prompt Designer Rulebook.pdf")
+        rules: require("../assets/docs/Code Of Conduct.pdf")
     }
 ]
 
 const Events = () => {
 
-    const handleRulebookClick = (index) => {
-        window.location.href = "/resume";
-    };
+    const navigate = useNavigate();
+
+    function handleRulebookClick(pdfLocation) {
+        // Use the navigate function to programmatically navigate to the RuleBook component
+        navigate(`/rulebook/${encodeURIComponent(pdfLocation)}`);
+    }
     
     return (
         <div id='events' className={` ${styles['events-background']} min-h-screen block`} >
@@ -75,7 +79,7 @@ const Events = () => {
                                         {element.content}
                                     </p>
                                     <div className='absolute bottom-3 w-full flex justify-center'>
-                                        <button className='rounded-[15px] text-xl w-[223px] h-[50px] bg-[#081819] hover:bg-slate-800 text-white border hover:border-slate-200 px-4 py-2' onClick={() => handleRulebookClick(element.rules)}>
+                                        <button onClick={() => handleRulebookClick(element.rules)} className='rounded-[15px] text-xl w-[223px] h-[50px] bg-[#081819] hover:bg-slate-800 text-white border hover:border-slate-200 px-4 py-2'>
                                             RULEBOOK
                                         </button>
                                     </div>
