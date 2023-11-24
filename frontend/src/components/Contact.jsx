@@ -3,7 +3,8 @@ import bgPattern from '../assets/bgpattern.jpg';
 import instaLogo from "../assets/instagramlogo.png";
 import linkedInLogo from "../assets/linkedinlogo.png";
 import mailLogo from "../assets/maillogo.png";
-const coc = require("../assets/docs/Catalysis Code Of Conduct.pdf");
+const coc = require("../assets/docs/Code Of Conduct.pdf");
+const tc = require("../assets/docs/Terms and Conditions.pdf");
 
 
 const Contact = () => {
@@ -34,7 +35,7 @@ const Contact = () => {
                 </div>
                 <div className ="text-center font-semibold py-2 text-[#ffffff]">Gagan: <a href="tel:9008243280">9008243280</a> | Tarana: <a href="tel:7483408791">7483408791</a></div>
                     <div></div>
-                <div className ="text-center text-lg px-2 py-4 pb-5 text-[#ffffff] ">&#169; 2023 Catalysis2.0 | All rights reserved | <a href={coc} rel='noreferrer noopener' target="_blank" className="hover:text-purple-300">Code of Conduct</a></div>
+                <div className ="text-center text-lg px-2 py-4 pb-5 text-[#ffffff] ">&#169; 2023 Catalysis2.0 | <a href={coc} rel='noreferrer noopener' target="_blank" className="hover:text-purple-300">Code of Conduct</a> | <a href={tc} rel='noreferrer noopener' target="_blank" className="hover:text-purple-300">Terms and Conditions</a></div>
             </footer>
             <div className="bg-[#1d1526] text-center font-semibold text-white p-2">Made by team <a href="https://www.instagram.com/genesis.ise/" rel='noreferrer noopener' target="_blank" className='text-purple-300'>Genesis</a> with ❤️</div>
         </div>
