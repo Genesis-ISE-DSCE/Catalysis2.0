@@ -1,8 +1,9 @@
 const Registration = require("../models/register");
+const nodemailer = require('nodemailer')
 
 const register = async (req, res) => {
     try {
-        console.log(req.body);
+        
         const { name, usn, phone, email, semester, branch, event } = req.body;
 
         const preExistingRegisteration = await Registration.findOne({ usn, event });
@@ -14,7 +15,29 @@ const register = async (req, res) => {
                 success: false
             });
         }
+
         const newRegisteration = await Registration.create(req.body);
+
+        async function main() {
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                  user: process.env.NODEMAILER_USER,
+                  pass: process.env.NODEMAILER_PASS,
+                },
+            });
+
+            await transporter.sendMail({
+              from: process.env.NODEMAILER_USER,
+              to: email,
+              subject: 'Catalysis Registration',
+              html: `<p>Your registration is successfull!</p>`,
+            });
+        }
+        
+        if(newRegisteration) {
+            await main();
+        }
         
         res.status(201).json({ newRegisteration });
     }
@@ -24,6 +47,7 @@ const register = async (req, res) => {
             error: error,
             success: false
         });
+       
     }
 }
 
