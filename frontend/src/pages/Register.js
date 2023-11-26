@@ -5,6 +5,7 @@ import logo from "../assets/logo.png";
 import "../App.css";
 import Axios from "axios";
 const coc = require("../assets/docs/Code Of Conduct.pdf");
+const tc = require("../assets/docs/Terms and Conditions.pdf");
 
 function RegistrationForm() {
 
@@ -30,8 +31,7 @@ function RegistrationForm() {
     event: '',
     semester: '',
     branch: '',
-    usn: '',
-    transactionId: ''
+    usn: ''
   });
 
   const handleChange = (event) => {
@@ -46,10 +46,6 @@ function RegistrationForm() {
     setIsChecked(!isChecked);
   };
 
-  // const handleCheckboxChange = () => {
-  //   setIsChecked(!isChecked);
-  // };
-
   function handleOkError() {
     setShowError('');
   }
@@ -59,7 +55,10 @@ function RegistrationForm() {
     
     if(isChecked) {
       setFormErrors(validate(formData));
+      console.log(formData);
+      console.log(Object.keys(validate(formData)).length);
       if(Object.keys(validate(formData)).length===0) {
+        console.log("sending form data");
         // http://localhost:5000/api/v1/register
         Axios.post("https://catalysis2-0-backend.onrender.com/api/v1/register",formData)
         .then((res)=>{
@@ -110,9 +109,6 @@ function RegistrationForm() {
     }
     if(!formData.usn){
       errors.usn = "USN is required!!";
-    }
-    if(!formData.transactionId){
-      errors.transactionId = "Tranasaction Id is required!!";
     }
     return errors;
   }
@@ -281,7 +277,7 @@ function RegistrationForm() {
           <p className="text-red-600">{formErrors.branch}</p>
         </div>
 
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="transactionId">
             Transaction ID:
           </label>
@@ -296,9 +292,9 @@ function RegistrationForm() {
             required
           />
           <p className="text-red-600">{formErrors.transactionId}</p>
-        </div>
+        </div> */}
 
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <label className="block text-[#F4D9D9] text-lg font-bold mb-2" htmlFor="transactionImg">
             Upload Tranasaction Image:
           </label>
@@ -311,11 +307,11 @@ function RegistrationForm() {
             required
           />
           <p className="text-red-600">{formErrors.transactionImg}</p>
-        </div>
+        </div> */}
 
         <div className='pb-4'>
           <input type="checkbox" className='form-checkbox text-[#22C3FF]' id='agree' checked={isChecked} onChange={handleCheckboxChange}/>
-          <label className='text-[#D4DFC7] pl-2 justify-center'>By registering you agree to our <a href={coc} rel='noreferrer noopener' target="_blank" className='text-purple-300'>Code of Conduct</a></label>
+          <label className='text-[#D4DFC7] pl-2 justify-center'>By registering you agree to our <a href={coc} rel='noreferrer noopener' target="_blank" className='text-purple-300'>Code of Conduct</a> & <a href={tc} rel='noreferrer noopener' target="_blank" className='text-purple-300'>Terms and Conditions</a></label>
           {isCheckboxTouched && !isChecked && <p className='text-red-600'>Required*</p>}
         </div>
 

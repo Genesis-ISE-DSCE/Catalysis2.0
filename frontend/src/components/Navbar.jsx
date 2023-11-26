@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import catalysis from "../assets/catalysis.png";
 import { Link } from 'react-router-dom';
+import "../components/styles/events.module.css";
 
 
 const Navbar = () => {
@@ -60,9 +61,9 @@ const Navbar = () => {
           <li>
             <Link to="/#contact" onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</Link>
           </li>
-          {/* <li>
-            <Link to="/registration" onClick={() => handleItemClick("registration")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Register</Link>
-          </li> */}
+          <li>
+            <Link to="/registration" onClick={() => handleItemClick("registration")} className="tagline text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Register</Link>
+          </li>
         </ul>
       </div>
   </div>
