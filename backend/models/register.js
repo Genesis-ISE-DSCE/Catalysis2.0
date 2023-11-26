@@ -69,12 +69,7 @@ const registrationSchema = new mongoose.Schema({
         type: String,
         enum: events,
         required: true
-    },
-    transactionId:{
-        type: String,
-        required: true
     }
-
 },
 {
     timestamps:true
