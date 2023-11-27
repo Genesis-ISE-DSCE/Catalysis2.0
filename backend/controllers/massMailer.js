@@ -22,7 +22,7 @@ const mailAll = async(req, res) => {
             // Send emails
             for (const email of emails) {
                 const mailOptions = {
-                    from: 'gagan200254@gmail.com',
+                    from: process.env.MAIL_USER,
                     to: email,
                     subject: subject,
                     text: body,
