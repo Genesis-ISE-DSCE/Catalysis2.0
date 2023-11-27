@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/v1/', registerRoute);
+app.use('/api/v1', registerRoute);
 
 const port = process.env.PORT || 5000;
 
