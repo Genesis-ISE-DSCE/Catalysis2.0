@@ -41,7 +41,7 @@ const events = [
     {
         img:require('../assets/TechnoSeek.png'),
         heading:'TechnoSeek',
-        content:'Unleash your tech prowess in our Treasure Hunt—an exhilarating journey through cryptic challenges and hidden knowledge, where wit leads to victory.',
+        content:'Unleash your tech prowess in our Ultimate Treasure Hunt—an exhilarating journey through cryptic challenges and hidden knowledge, where wit and strategy lead to victory.',
         rules: require("../assets/docs/TechnoSeek Rulebook.pdf")
     },
     {

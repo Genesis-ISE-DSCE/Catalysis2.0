@@ -11,7 +11,7 @@ const Landing = () => {
 
 
   return (
-    <div id="landing" className="lanbody h-screen">
+    <div id="landing" className="lanbody">
       <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-56">
           <img fetchpriority = "high" src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]"/>       
       </div>
@@ -21,9 +21,11 @@ const Landing = () => {
       <div className="pt-16">
         <p className="text-[#E5F2FF] font-semibold text-center lg:text-4xl md:text-3xl text-3xl">18<sup>th</sup> - 20<sup>th</sup> December</p>
       </div>
-      <Link to="/registration">
-        <button className="tagline flex text-white lg:text-4xl md:text-3xl text-xl mx-auto">Register Now</button>
-      </Link>
+      <div className="pb-20">
+        <Link to="/registration">
+          <button className="tagline flex text-white lg:text-4xl md:text-3xl text-xl mx-auto">Register Now</button>
+        </Link>
+      </div>
       <div className="mascot ">
         <picture height={481} width={424} alt="mascot" >
            <source type = "image/avif" srcSet={mascot3avif}/>

@@ -1,5 +1,5 @@
 const Registration = require("../models/register");
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
 
 const register = async (req, res) => {
     try {
@@ -20,17 +20,18 @@ const register = async (req, res) => {
 
         async function main() {
             const transporter = nodemailer.createTransport({
-                service: 'gmail',
+                host: 'smtp.gmail.com',
+                port : 465,
                 auth: {
-                  user: process.env.NODEMAILER_USER,
-                  pass: process.env.NODEMAILER_PASS,
-                },
+                    user: process.env.MAIL_USER,
+                    pass: process.env.MAIL_PASSWORD
+                }
             });
 
             await transporter.sendMail({
-              from: process.env.NODEMAILER_USER,
+              from: process.env.MAIL_USER,
               to: email,
-              subject: 'Catalysis Registration',
+              subject: 'Catalysis2.0 Registration',
               html: `<p>Your registration is successfull!</p>`,
             });
         }
