@@ -1,5 +1,5 @@
 const Registration = require("../models/register");
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
 
 const register = async (req, res) => {
     try {

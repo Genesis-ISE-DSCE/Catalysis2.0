@@ -3,6 +3,7 @@ const app = express();
 
 const connectDB = require("./database/connect");
 const registerRoute = require('./routes/registerRoute');
+const massMailerRoute = require("./routes/massMailRoute")
 require('dotenv').config();
 const cors = require("cors");
 
@@ -10,6 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1', registerRoute);
+app.use('/api/v1', massMailerRoute);
 
 const port = process.env.PORT || 5000;
 
