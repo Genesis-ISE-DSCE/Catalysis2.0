@@ -2,51 +2,51 @@ import styles from './styles/events.module.css';
 
 const events = [
     {
-        img: require('../assets/valorant.png'),
-        heading: 'Code Red',
-        content: 'A global competitive e-sports tournament series for the video game Valorant.',
+        img: require('../assets/lecture.png'),
+        heading: 'Lecture Series',
+        content: 'A series of informative sessions or workshops covering various technical or educational topics. ',
         rules: ''
     },
     {
-        img: require('../assets/codeJam.png'),
-        heading: 'Coding Jam',
-        content: 'Coding contest in which participants solve algorithmic problems using a programming language, with the goal of achieving the highest performance.',
+        img: require('../assets/dsa.png'),
+        heading: 'DSA SmackDown',
+        content: 'A competition focused on Data Structures and Algorithms where participants compete to solve challenging problems.',
         rules: ''
     },
     {
-        img: require('../assets/whatsThePoint.png'),
-        heading: 'What’s the Point?',
-        content: 'A competition in which teams of students discuss a subject, and the team that makes the best arguments wins.',
+        img: require('../assets/promptdesigner.png'),
+        heading: 'Prompt Designer',
+        content: 'A competition where participants showcase their creative design skills and prompting skills by creating the best design using AI.',
         rules: ''
     },
     {
-        img: require('../assets/innovator.png'),
-        heading: 'Innovator',
-        content: 'Similar to Just a Minute (JAM). Students will be given two technologies and they will be asked to suggest possible real-life applications using both the technologies.',
+        img: require('../assets/technoseek.png'),
+        heading: 'Technoseek',
+        content: 'An event inspired from Cicada3301, which integrates treasure hunt and CTF.',
         rules: ''
     },
     {
-        img:require('../assets/callToLaunch.png'),
-        heading:'Call to Launch',
-        content:'A contest where participants present their entrepreneurial skills, and business concepts to a panel in the hope of winning investment capital.',
+        img:require('../assets/valorant.png'),
+        heading:'CodeRED',
+        content:'A high-intensity Valorant gaming tournament .',
         rules:''
     },
     {
-        img:require('../assets/airCrash.png'),
-        heading:'Air Crash',
-        content:'An event where participants represent famous people of the tech industry and convincingly persuade the judges that they are the most imperative in business and deserving of a parachute.',
+        img:require('../assets/relay.png'),
+        heading:'Coding Relay Race',
+        content:'A team-based coding competition were participants take turns to solve coding challenges, passing the baton of  work from one team member to the next in a relay fashion.',
         rules:''
     },
     {
-        img:require('../assets/TechnoSeek.png'),
-        heading:'TechnoSeek',
-        content:'Inspired by Cicada 3301, TechnoSeek is a technical treasure hunt and has elements of a life-size CTF.',
+        img:require('../assets/uiux.png'),
+        heading:'UI/UX Design',
+        content:'An event that explores UI and user experience design, allowing participants to create user-friendly digital interfaces',
         rules:''
     },
     {
-        img:require('../assets/quizUp.png'),
-        heading:'Quiz-Up',
-        content:'A contest in which a team of participants tests what they know by answering questions on the topics.',
+        img:require('../assets/technicalquiz.png'),
+        heading:'Technical Quiz',
+        content:'An event that tests participant’s knowledge of technical topics through a series of questions and answers.',
         rules:''
     }
 ]
