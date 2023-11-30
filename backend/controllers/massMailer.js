@@ -18,9 +18,12 @@ const mailAll = async(req, res) => {
     
             const users = await Registration.find();
             const emails = users.map(user => user.email);
+            const uniqueEmail = [...new Set(emails)];
+            console.log(uniqueEmail);
         
             // Send emails
-            for (const email of emails) {
+            for (const email of uniqueEmail) {
+                console.log(email);
                 const mailOptions = {
                     from: process.env.MAIL_USER,
                     to: email,
