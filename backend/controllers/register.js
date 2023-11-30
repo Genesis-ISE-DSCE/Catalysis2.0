@@ -28,11 +28,25 @@ const register = async (req, res) => {
                 }
             });
 
+            const pdfAttachment1 = {
+                filename: 'Code of Conduct',
+                path: '../assets/Code Of Conduct.pdf'
+            };
+    
+            const pdfAttachment2 = {
+                filename: 'Terms & Conditions',
+                path: '../assets/Terms and Conditions.pdf'
+            };
+
             await transporter.sendMail({
-              from: process.env.MAIL_USER,
-              to: email,
-              subject: 'Catalysis2.0 Registration',
-              html: `<p>Your registration is successfull!</p>`,
+                from: process.env.MAIL_USER,
+                to: email,
+                subject: 'Catalysis2.0 Registration',
+                html:   `<div>
+                        <p>Your registration is successfull!</p> 
+                        <p>The whatsapp link will be shared soon. Kindly check your mail for further updates.</p>
+                        </div>`,
+                attachments: [pdfAttachment1, pdfAttachment2],
             });
         }
         
