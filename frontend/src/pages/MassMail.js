@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 const MassMail = () => {
-    const [inputs,setInputs] =useState({})
+    const [inputs,setInputs] = useState({});
+    const events = [
+        "PromptDesigner",
+        "TechnicalQuiz",
+        "LectureSeries(Workshop)",
+        "DSASmackDown",
+        "UI/UXDesign",
+        "CodeRed",
+        "Technoseek",
+        "CodingRelayRace",
+        "All"
+    ];
+
     const handleSubmit=(event)=>{
         event.preventDefault()
         console.log(inputs);
         axios.post("https://catalysis2-0-backend.onrender.com/api/v1/sendMassMail",inputs)
         .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
-
     }
     const handleChange=(event)=>{
         const name=event.target.name
@@ -24,6 +35,15 @@ const MassMail = () => {
             <form onSubmit={handleSubmit} className="flex gap-4 flex-col w-full  items-center justify-center">
                 <label className='text-lg'>Enter User Code</label>
                 <input className='w-1/5 border-2 border-[black] rounded-md p-2' type="text" placeholder="" name="user" value={inputs.user || ""} onChange={handleChange}/> 
+                <label className='text-lg'>Select Event</label>
+                <select className='w-1/5 border-2 border-[black] rounded-md p-2' name="event" value={inputs.event || ""} onChange={handleChange}>
+                    <option value="">Select an Event</option>
+                    {events.map((event) => (
+                        <option key={event} value={event}>
+                            {event}
+                        </option>
+                    ))}
+                </select>
                 <input className='w-2/3 border-2 border-[black] rounded-md p-2' type="text" placeholder="Subject" name="subject" value={inputs.subject || ""} onChange={handleChange}/>
                 <input className='w-2/3 border-2 border-[black] rounded-md p-2' type="text" placeholder="Body" name="body" value={inputs.body || ""} onChange={handleChange} />
                 <button
