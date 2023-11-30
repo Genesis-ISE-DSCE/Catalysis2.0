@@ -4,8 +4,9 @@ const MassMail = () => {
     const [inputs,setInputs] =useState({})
     const handleSubmit=(event)=>{
         event.preventDefault()
+        console.log(inputs);
         axios.post("https://catalysis2-0-backend.onrender.com/api/v1/sendMassMail",inputs)
-        .then((res)=>console.log(res))
+        .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
 
     }
