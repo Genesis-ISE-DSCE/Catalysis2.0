@@ -56,7 +56,6 @@ function RegistrationForm() {
     if(isChecked) {
       setFormErrors(validate(formData));
       console.log(formData);
-      console.log(Object.keys(validate(formData)).length);
       if(Object.keys(validate(formData)).length===0) {
         console.log("sending form data");
         // http://localhost:5000/api/v1/register

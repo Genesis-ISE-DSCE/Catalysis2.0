@@ -30,12 +30,12 @@ const register = async (req, res) => {
 
             const pdfAttachment1 = {
                 filename: 'Code of Conduct',
-                path: '../assets/Code Of Conduct.pdf'
+                path: require('../assets/Code Of Conduct.pdf')
             };
     
             const pdfAttachment2 = {
                 filename: 'Terms & Conditions',
-                path: '../assets/Terms and Conditions.pdf'
+                path: require('../assets/Terms and Conditions.pdf')
             };
 
             await transporter.sendMail({
