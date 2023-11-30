@@ -58,7 +58,7 @@ function RegistrationForm() {
       console.log(formData);
       if(Object.keys(validate(formData)).length===0) {
         console.log("sending form data");
-        // http://localhost:5000/api/v1/register
+        // http://localhost:5000/api/v1/register 
         Axios.post("https://catalysis2-0-backend.onrender.com/api/v1/register",formData)
         .then((res)=>{
           const response = res.data;

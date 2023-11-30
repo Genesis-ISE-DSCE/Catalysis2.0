@@ -1,5 +1,7 @@
 const Registration = require("../models/register");
 const nodemailer = require('nodemailer');
+const path = require('path');
+
 
 const register = async (req, res) => {
     try {
@@ -30,12 +32,14 @@ const register = async (req, res) => {
 
             const pdfAttachment1 = {
                 filename: 'Code of Conduct',
-                path: require('../assets/Code Of Conduct.pdf')
+                path: path.join(__dirname, '../assets/Code Of Conduct.pdf'),
+                contentType: "application/pdf",
             };
     
             const pdfAttachment2 = {
                 filename: 'Terms & Conditions',
-                path: require('../assets/Terms and Conditions.pdf')
+                path: path.join(__dirname, '../assets/Terms and Conditions.pdf'),
+                contentType: "application/pdf",
             };
 
             await transporter.sendMail({
@@ -58,7 +62,7 @@ const register = async (req, res) => {
     }
     catch (error) {
         res.status(400).json({
-            msg: 'Something went Wrong!!',
+            msg: 'Hi!!',
             error: error,
             success: false
         });
