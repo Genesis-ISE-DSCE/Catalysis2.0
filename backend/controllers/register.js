@@ -62,7 +62,7 @@ const register = async (req, res) => {
     }
     catch (error) {
         res.status(400).json({
-            msg: 'Hi!!',
+            msg: 'Error occoured during registration!!',
             error: error,
             success: false
         });
