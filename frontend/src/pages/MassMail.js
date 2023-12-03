@@ -34,7 +34,7 @@ const MassMail = () => {
         event.preventDefault();
         console.log(inputs);
 
-        axios.post("https://catalysis2-0-backend.onrender.com/api/v1/sendMassMail", inputs)
+        axios.post("http://13.235.9.178:5000/api/v1/sendMassMail", inputs)
         .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
     }
