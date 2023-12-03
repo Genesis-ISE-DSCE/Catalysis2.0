@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {useNavigate} from 'react-router-dom';
-import bgImage from "../assets/registration-bg.png";
+import bgImage from "../assets/registration-bg.avif";
 import logo from "../assets/logo.png";
 import "../App.css";
 import Axios from "axios";
@@ -57,7 +57,7 @@ function RegistrationForm() {
       setFormErrors(validate(formData));
       console.log(formData);
       if(Object.keys(validate(formData)).length===0) {
-        console.log("sending form data");
+        console.log("Sending form data");
         // http://localhost:5000/api/v1/register 
         Axios.post("https://catalysis2-0-backend.onrender.com/api/v1/register",formData)
         .then((res)=>{
@@ -67,7 +67,7 @@ function RegistrationForm() {
           })
         .catch((err)=>{
           console.log(err);
-          setShowError(err);
+          setShowError(err.response?.data || "You have already registered for the event!!");
         })
       }
     }
@@ -344,7 +344,7 @@ function RegistrationForm() {
         <div className="popup bg-[#381851] lg:w-[540px] lg:pt-8 md:w-[480px] md:pt-8 w-[320px] pt-0 rounded-2xl">
             <img className="lg:float-left lg:w-48 lg:h-auto md:float-left md:w-40 md:h-auto justify-center w-20 h-auto" src={logo} alt="Registration eva" />
             <div>
-            <p className="font-poppins mb-4 lg:text-2xl md:text-xl text-sm text-red-500 text-center">You have already registered for this event!!</p>
+            <p className="font-poppins mb-4 lg:text-2xl md:text-xl text-sm text-red-500 text-center">{showError}</p>
           </div>
           <div className='lg:pt-20 lg:pb-8 md:pt-16 md:pb-6 pt-2 pr-4'>
             <button onClick={handleOkError} className="lg:text-xl shadow hover:bg-[#490595] hover:text-white focus:shadow-outline focus:outline-none text-black font-bold py-2 px-8 rounded text-sm" type="button">

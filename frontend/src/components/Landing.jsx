@@ -11,7 +11,7 @@ const Landing = () => {
 
 
   return (
-    <div id="landing" className="lanbody">
+    <div id="landing" className="lanbody lg:pb-8">
       <div className="flex justify-center lg:pt-32 md:pt-16 items-center pt-56">
           <img fetchpriority = "high" src={catalysisImg} alt="Logo" className="lg:w-[60%] md:w-[60%] w-[90%]"/>       
       </div>
