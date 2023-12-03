@@ -10,30 +10,39 @@ const attachmentDocsPath = [
     },
     {
         "filename": "TechnicalQuiz-Rulebook",
+        "path": path.join(__dirname, '../assets/Technical Quiz Rulebook.pdf'),
     },
     {
         "filename": "LectureSeries(Workshop)-Rulebook",
+        "path": path.join(__dirname, '../assets/Code Of Conduct.pdf'),
     },
     {
         "filename": "DSASmackDown-Rulebook",
+        "path": path.join(__dirname, '../assets/DSA Smackdown Rulebook.pdf'),
     },
     {   
         "filename": "UI/UXDesign-Rulebook",
+        "path": path.join(__dirname, '../assets/UI:UX Design Rulebook.pdf'),
     },
     {
         "filename": "CodeRed-Rulebook",
+        "path": path.join(__dirname, '../assets/CodeRed Rulebook.pdf'),
     },
     {
         "filename": "Technoseek-Rulebook",
+        "path": path.join(__dirname, '../assets/TechnoSeek Rulebook.pdf'),
     },
     {
         "filename": "CodingRelayRace-Rulebook",
+        "path": path.join(__dirname, '../assets/Code Of Conduct.pdf'),
     },
     {
         "filename": "Terms&Conditions",
+        "path": path.join(__dirname, '../assets/Terms and Conditions.pdf'),
     },
     {
-        "filename": "CodeOfConduct"
+        "filename": "CodeOfConduct",
+        "path": path.join(__dirname, '../assets/Code Of Conduct.pdf'),
     },
 ];
 
