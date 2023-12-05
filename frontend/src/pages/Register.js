@@ -60,7 +60,8 @@ function RegistrationForm() {
         console.log("Sending form data");
         // http://localhost:5000/api/v1/register 
         // https://catalysis2-0-backend.onrender.com
-        Axios.post("http://13.235.9.178:5000/api/v1/register",formData)
+        // http://13.235.9.178:5000/api/v1/register
+        Axios.post("http://localhost:5000/api/v1/register",formData)
         .then((res)=>{
           const response = res.data;
           console.log(response);
@@ -68,7 +69,7 @@ function RegistrationForm() {
           })
         .catch((err)=>{
           console.log(err);
-          setShowError(err.response?.data || "You have already registered for the event!!");
+          setShowError(err || "You have already registered for the event!!");
         })
       }
     }
