@@ -59,17 +59,19 @@ function RegistrationForm() {
       if(Object.keys(validate(formData)).length===0) {
         console.log("Sending form data");
         // http://localhost:5000/api/v1/register 
-        // https://catalysis2-0-backend.onrender.com
+        // https://catalysis2-0-backend.onrender.com/api/v1/register
         // http://13.235.9.178:5000/api/v1/register
-        Axios.post("http://localhost:5000/api/v1/register",formData)
+        // https://catalysis20-production.up.railway.app/api/v1/register
+        Axios.post("https://catalysis20-production.up.railway.app/api/v1/register",formData)
         .then((res)=>{
           const response = res.data;
           console.log(response);
           setShowPopup(true);
           })
         .catch((err)=>{
-          console.log(err);
-          setShowError(err || "You have already registered for the event!!");
+          console.log(err.response.data.error.msg);
+          let x = err.response.data.error.msg;
+          setShowError(x);
         })
       }
     }

@@ -36,8 +36,9 @@ const MassMail = () => {
         // http://localhost:5000/api/v1/register 
         // https://catalysis2-0-backend.onrender.com
         // http://13.235.9.178:5000/api/v1/register
-        
-        axios.post("http://localhost:5000/api/v1/register", inputs)
+        // https://catalysis20-production.up.railway.app/api/v1/register
+
+        axios.post("https://catalysis20-production.up.railway.app/api/v1/register", inputs)
         .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
     }
@@ -98,4 +99,4 @@ const MassMail = () => {
     )
 }
 
-export default MassMail
+export default MassMail;
