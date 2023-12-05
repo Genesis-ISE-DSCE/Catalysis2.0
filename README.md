@@ -34,3 +34,19 @@ Some important pointers:
 
 ## Steps to Run
 Hopefully you'll figure it out on your own 🙃
+
+## Minor fixups
+
+### About section:
+Add a video to this section
+
+### Schedule:
+Update the schedule
+
+### Sponsors
+Put the new sponsors logos and remove past sponsors section
+
+### API endpoints
+create a page to display all registrations
+display registrations based on events
+
