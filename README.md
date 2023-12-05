@@ -31,6 +31,5 @@ Some important pointers:
 - If there are any suggested changes, try to implement them as suggested.
 - If you have any doubts, you can reach out to us.
 
-
 ## Steps to Run
 Hopefully you'll figure it out on your own 🙃
