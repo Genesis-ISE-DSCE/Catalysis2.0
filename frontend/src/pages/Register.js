@@ -55,7 +55,6 @@ function RegistrationForm() {
     
     if(isChecked) {
       setFormErrors(validate(formData));
-      console.log(formData);
       if(Object.keys(validate(formData)).length===0) {
         console.log("Sending form data");
         // http://localhost:5000/api/v1/register 
@@ -64,12 +63,9 @@ function RegistrationForm() {
         // https://catalysis20-production.up.railway.app/api/v1/register
         Axios.post("https://catalysis20-production.up.railway.app/api/v1/register",formData)
         .then((res)=>{
-          const response = res.data;
-          console.log(response);
           setShowPopup(true);
           })
         .catch((err)=>{
-          console.log(err.response.data.error.msg);
           let x = err.response.data.error.msg;
           setShowError(x);
         })
