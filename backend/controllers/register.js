@@ -2,6 +2,48 @@ const Registration = require("../models/register");
 const nodemailer = require('nodemailer');
 const path = require('path');
 
+const mailSystem = async (email) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const transporter = nodemailer.createTransport({
+                host: 'smtp.gmail.com',
+                port: 465,
+                auth: {
+                    user: process.env.MAIL_USER,
+                    pass: process.env.MAIL_PASSWORD
+                }
+            });
+
+            const pdfAttachment1 = {
+                filename: 'Code of Conduct',
+                path: path.join(__dirname, '../assets/Code Of Conduct.pdf'),
+                contentType: "application/pdf",
+            };
+
+            const pdfAttachment2 = {
+                filename: 'Terms & Conditions',
+                path: path.join(__dirname, '../assets/Terms and Conditions.pdf'),
+                contentType: "application/pdf",
+            };
+
+            await transporter.sendMail({
+                from: process.env.MAIL_USER,
+                to: email,
+                subject: 'Catalysis2.0 Registration',
+                html:   `<div>
+                            <p>Your registration is successfull!</p> 
+                            <p>The WhatsApp link will be shared soon. Kindly check your mail for further updates.</p>
+                        </div>`,
+                attachments: [pdfAttachment1, pdfAttachment2],
+            });
+
+            resolve();
+        } catch (error) {
+            reject(error);
+        }
+    });
+};
+
 const register = async (req, res) => {
     try {
         
@@ -19,47 +61,16 @@ const register = async (req, res) => {
             });
         }
 
-        async function mailSystem() {
-            const transporter = nodemailer.createTransport({
-                host: 'smtp.gmail.com',
-                port : 465,
-                auth: {
-                    user: process.env.MAIL_USER,
-                    pass: process.env.MAIL_PASSWORD
-                }
-            });
-        
-            const pdfAttachment1 = {
-                filename: 'Code of Conduct',
-                path: path.join(__dirname, '../assets/Code Of Conduct.pdf'),
-                contentType: "application/pdf",
-            };
-        
-            const pdfAttachment2 = {
-                filename: 'Terms & Conditions',
-                path: path.join(__dirname, '../assets/Terms and Conditions.pdf'),
-                contentType: "application/pdf",
-            };
-        
-            await transporter.sendMail({
-                from: process.env.MAIL_USER,
-                to: email,
-                subject: 'Catalysis2.0 Registration',
-                html:   `<div>
-                        <p>Your registration is successfull!</p> 
-                        <p>The whatsapp link will be shared soon. Kindly check your mail for further updates.</p>
-                        </div>`,
-                attachments: [pdfAttachment1, pdfAttachment2],
-            });
-        }
-
         const newRegisteration = await Registration.create(req.body);
-        
-        if(newRegisteration) {
-            await mailSystem();
-        }
-        
         res.status(201).json({ newRegisteration });
+        
+        mailSystem(email)
+            .then(() => {
+                console.log('Mail sent successfully!');
+            })
+            .catch((error) => {
+                console.error('Error sending mail:', error);
+            });
     }
     catch (error) {
         res.status(500).json({
