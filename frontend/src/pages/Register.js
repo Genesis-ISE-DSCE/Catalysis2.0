@@ -60,8 +60,8 @@ function RegistrationForm() {
         // http://localhost:5000/api/v1/register 
         // https://catalysis2-0-backend.onrender.com/api/v1/register
         // http://13.235.9.178:5000/api/v1/register
-        // https://catalysis20-production.up.railway.app/api/v1/register
-        Axios.post("https://catalysis20-production.up.railway.app/api/v1/register",formData)
+        // https://catalysis20-backend.up.railway.app/api/v1/register
+        Axios.post("https://catalysis20-backend.up.railway.app/api/v1/register",formData)
         .then((res)=>{
           setShowPopup(true);
           })
