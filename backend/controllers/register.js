@@ -30,8 +30,8 @@ const mailSystem = async (email) => {
                 from: process.env.MAIL_USER,
                 to: email,
                 subject: 'Catalysis2.0 Registration',
-                html:   `<div>
-                            <p>Your registration is successfull!</p> 
+                html: `<div>
+                            <p>Your registration is successful!</p> 
                             <p>The WhatsApp link will be shared soon. Kindly check your mail for further updates.</p>
                         </div>`,
                 attachments: [pdfAttachment1, pdfAttachment2],
@@ -39,6 +39,7 @@ const mailSystem = async (email) => {
 
             resolve();
         } catch (error) {
+            console.error('Error sending mail:', error);
             reject(error);
         }
     });
@@ -46,14 +47,12 @@ const mailSystem = async (email) => {
 
 const register = async (req, res) => {
     try {
-        
         const { name, usn, phone, email, semester, branch, event } = req.body;
 
-        const preExistingRegisteration = await Registration.findOne({ usn, event });
-        // console.log(preExistingRegisteration);
-        
-        if(preExistingRegisteration){
-            return res.status(500).json({
+        const preExistingRegistration = await Registration.findOne({ usn, event });
+
+        if (preExistingRegistration) {
+            return res.status(400).json({
                 error: {
                     msg: 'You have already registered for this event!',
                     success: false
@@ -61,25 +60,25 @@ const register = async (req, res) => {
             });
         }
 
-        const newRegisteration = await Registration.create(req.body);
-        res.status(201).json({ newRegisteration });
-        
+        const newRegistration = await Registration.create(req.body);
+        res.status(201).json({ newRegistration });
+
         mailSystem(email)
             .then(() => {
-                console.log('Mail sent successfully!');
-            })
+        console.log('Mail sent successfully!');
+    })
             .catch((error) => {
-                console.error('Error sending mail:', error);
-            });
+        console.error('Error sending mail:', error);
+});
     }
     catch (error) {
         res.status(500).json({
             error: {
-                msg: 'Error occured during registrartion. Try again later!',
+                msg: 'Error occurred during registration. Try again later!',
                 success: false
+
             }
         });
-       
     }
 }
 
@@ -87,11 +86,12 @@ const getRegistrations = async (req, res) => {
     try {
         const registrations = await Registration.find({});
         res.status(200).json({ registrations });
-    } 
-    catch (error) {
+    } catch (error) {
+        console.error('Error getting registrations:', error);
         res.status(500).json({
-            msg: 'Something went Wrong!!',
+            msg: 'Error getting registrations. Try again later!',
             success: false
+            
         });
     }
 }
@@ -109,11 +109,12 @@ const getEventDetails = async (req, res) => {
         }
 
         res.status(200).json({ allEvent });
-    }
-    catch (error) {
+    } catch (error) {
+        console.error('Error getting event details:', error);
         res.status(500).json({
-            msg: 'Something went Wrong!!',
-            success: false
+            msg: 'Error getting event details. Try again later!',
+            success: false,
+        
         });
     }
 }
@@ -122,4 +123,4 @@ module.exports = {
     register,
     getRegistrations,
     getEventDetails
-}
+};
