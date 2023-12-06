@@ -22,7 +22,7 @@ const attachmentDocsPath = [
     },
     {   
         "filename": "UI/UXDesign-Rulebook",
-        "path": path.join(__dirname, '../assets/UI:UX Design Rulebook.pdf'),
+        "path": path.join(__dirname, '../assets/UI_UX Design Rulebook.pdf'),
     },
     {
         "filename": "CodeRed-Rulebook",
