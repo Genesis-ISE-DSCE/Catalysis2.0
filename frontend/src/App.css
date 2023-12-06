@@ -50,7 +50,30 @@
   );
   background-repeat: no-repeat;
 }
-
+.confet{
+  width: 100%;
+  background: radial-gradient(
+    88.23% 154.15% at 53.75% 66.85%,
+    #382749 0%,
+    #000000 100%
+  );
+  background-repeat: no-repeat;
+  margin-top: -5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 900px;
+}
+.cbtn{
+  padding: 20px 40px;
+  font-size: 24px; 
+  font-weight: bolder;
+  background-color: #2a0a4a; 
+  color: #fff; 
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 6px;
+}
 .mascot {
   position: fixed;
   bottom: 0px;

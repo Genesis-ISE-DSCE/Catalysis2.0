@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
+
 const About = React.lazy(()=>import('../components/About'));
+const ConfettiComp = React.lazy(()=>import('./ConfettiComp'));
 const Contact = React.lazy(()=>import('../components/Contact'));
 const Events = React.lazy(()=>import('../components/Events'));
 const Faqs = React.lazy(()=>import('../components/Faqs'));
@@ -45,9 +47,11 @@ const LandingPage = () => {
             </Suspense>    
 
             {/* <Suspense fallback={<div>Loading...</div>}>
-                <Registrations />
-            </Suspense>     */}
-                   
+                <ConfettiComp />
+             </Suspense>     */}
+
+
+          
         </div>
     );
 };

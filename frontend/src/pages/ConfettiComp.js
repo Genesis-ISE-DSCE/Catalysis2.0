@@ -1,0 +1,40 @@
+import React, { useState, useEffect } from 'react';
+import Confetti from 'react-confetti';
+import { useNavigate } from 'react-router-dom';
+
+export default function ConfettiComp() {
+  const navigate = useNavigate();
+  const [isConfettiActive, setIsConfettiActive] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsConfettiActive(true);
+    navigate("/")
+  };
+
+  useEffect(() => {
+    if (isConfettiActive) {
+      const timeoutId = setTimeout(() => {
+        setIsConfettiActive(false);
+      }, 2000);
+
+      return () => {
+        clearTimeout(timeoutId);
+      };
+    }
+  }, [isConfettiActive]);
+
+  const confettiConfig = {
+    angle: 90,
+    spread: 360,
+    startVelocity: 40,
+    elementCount: 70,
+    decay: 0.95,
+  };
+
+  return (
+    <div className="confet" >
+      <button className='cbtn' onClick={handleButtonClick} >Launch Website</button>
+      <Confetti active={isConfettiActive} config={confettiConfig} />
+    </div>
+  );
+}
