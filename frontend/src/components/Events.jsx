@@ -30,7 +30,7 @@ const events = [
         img:require('../assets/uiux.png'),
         heading:'UI/UX Design',
         content:'Enter the UI/UX Design Competition, where creativity meets functionality in a showcase of design brilliance and user-centric innovation.',
-        rules: require("../assets/docs/UI_UX Design Rulebook.pdf")
+        rules: require("../assets/docs/UI:UX Design Rulebook.pdf")
     },
     {
         img:require('../assets/valorant.png'),
