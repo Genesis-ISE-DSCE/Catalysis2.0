@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 
 
-const Registrationlist = () => {
+const RegisterationList = () => {
   const[registrationdata, setregistation] = useState([]);
   const[selectedevent, setselectedevent] = useState([]);
   const [secretCode, setSecretCode] = useState('');
@@ -112,4 +112,4 @@ const Registrationlist = () => {
   )
 }
 
-export default Registrationlist;
+export default RegisterationList;

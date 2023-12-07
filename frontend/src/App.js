@@ -7,7 +7,7 @@ import RuleBook from "./components/RuleBook";
 import MassMail from "./pages/MassMail";
 import ConfettiComp from "./pages/ConfettiComp";
 import Page from "./pages/Page";
-import RegistrationList from "./pages/RegistrationList";
+import RegisterationList from "./pages/RegisterationList";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route path="/rulebook/:id" element={<RuleBook />} />
         <Route path="/massmail" element={<MassMail />} />
         <Route path="/confetti" element={<ConfettiComp />} />
-        <Route path="/registrationList" element={<RegistrationList />} />
+        <Route path="/registrationList" element={<RegisterationList />} />
       </Routes>
       </div>
     </BrowserRouter>
