@@ -39,7 +39,7 @@ export default function ConfettiComp() {
         alt="Catalysis Logo"
         className="max-w-full h-auto mb-4 transform sm:scale-125 scale-100"
       />
-      <button className='cbtn text-sm mt-3 sm:mt-5' onClick={handleButtonClick}>Launch Website</button>
+      <button className='cbtn text-sm mt-3 sm:mt-5' onClick={handleButtonClick}>Start</button>
       <Confetti active={isConfettiActive} config={confettiConfig} />
     </div>
   );
