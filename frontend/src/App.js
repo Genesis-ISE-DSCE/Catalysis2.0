@@ -5,6 +5,8 @@ import RegistrationForm from "./pages/Register";
 import Navbar from "./components/Navbar";
 import RuleBook from "./components/RuleBook";
 import MassMail from "./pages/MassMail";
+import ConfettiComp from "./pages/ConfettiComp";
+import Page from "./pages/Page";
 
 function App() {
   return (
@@ -13,10 +15,11 @@ function App() {
         <Navbar />
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/page" element={<Page />} />
         <Route path="/registration" element={<RegistrationForm />} />
         <Route path="/rulebook/:id" element={<RuleBook />} />
         <Route path="/massmail" element={<MassMail />} />
-        
+        <Route path="/confetti" element={<ConfettiComp />} />
       </Routes>
       </div>
     </BrowserRouter>

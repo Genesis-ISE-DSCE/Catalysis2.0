@@ -22,7 +22,7 @@ const attachmentDocsPath = [
     },
     {   
         "filename": "UI/UXDesign-Rulebook",
-        "path": path.join(__dirname, '../assets/UI:UX Design Rulebook.pdf'),
+        "path": path.join(__dirname, '../assets/UI_UX Design Rulebook.pdf'),
     },
     {
         "filename": "CodeRed-Rulebook",
@@ -48,19 +48,19 @@ const attachmentDocsPath = [
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port : 465,
+    port: 465,
     auth: {
         user: process.env.MAIL_USER,
         pass: process.env.MAIL_PASSWORD
     }
 });
 
-const mailAll = async(req, res) => {
+const mailAll = async (req, res) => {
     try {
         console.log(req.body);
         const { user, subject, body, event, attachmentDocs } = req.body;
-        if ( user === process.env.USER_AUTH ) {
 
+        if (user === process.env.USER_AUTH) {
             let users;
 
             if (event === 'All') {
@@ -72,7 +72,7 @@ const mailAll = async(req, res) => {
             let pdfAttachment = null;
 
             if(attachmentDocs != "") {
-
+                
                 const pdfAttachment = {
                     contentType: "application/pdf",
                 };
@@ -84,7 +84,7 @@ const mailAll = async(req, res) => {
                     }
                 }
             }
-    
+
             const emails = users.map(user => user.email);
             const uniqueEmail = [...new Set(emails)];
 
@@ -98,16 +98,15 @@ const mailAll = async(req, res) => {
                 };
                 await transporter.sendMail(mailOptions);
             }
-        
+
             res.status(200).send('Emails sent successfully');
-        }
-        else {
-            res.status(300).send('Invalid User');
+        } else {
+            res.status(401).send('Unauthorized Access'); // 401 for unauthorized access
         }
     } catch (error) {
-        console.error(error);
+        console.error('Error sending emails:', error);
         res.status(500).send('Internal Server Error');
     }
 };
 
-module.exports = { mailAll }
+module.exports = { mailAll };
