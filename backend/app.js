@@ -4,6 +4,7 @@ const app = express();
 const connectDB = require("./database/connect");
 const registerRoute = require('./routes/registerRoute');
 const massMailerRoute = require("./routes/massMailRoute")
+
 require('dotenv').config();
 const cors = require("cors");
 
@@ -23,6 +24,7 @@ const startServer = async () => {
     } catch (err) {
       console.log(err);
     }
+  
 };
 
 startServer();

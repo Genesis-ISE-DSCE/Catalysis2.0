@@ -16,6 +16,7 @@ function App() {
         <Route path="/registration" element={<RegistrationForm />} />
         <Route path="/rulebook/:id" element={<RuleBook />} />
         <Route path="/massmail" element={<MassMail />} />
+        
       </Routes>
       </div>
     </BrowserRouter>
