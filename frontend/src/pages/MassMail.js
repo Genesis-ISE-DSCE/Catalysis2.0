@@ -30,6 +30,13 @@ const MassMail = () => {
         "CodeOfConduct"
     ];
 
+    const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+        }
+    };
+
     const handleSubmit=(event)=>{
         event.preventDefault();
         console.log(inputs);
@@ -38,7 +45,7 @@ const MassMail = () => {
         // http://13.235.9.178:5000/api/v1/sendMassMail
         // https://catalysis20-production.up.railway.app/api/v1/sendMassMail
 
-        axios.post("https://catalysis20-production.up.railway.app/api/v1/sendMassMail", inputs)
+        axios.post("https://catalysis20-production.up.railway.app/api/v1/sendMassMail", inputs, config)
         .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
     }
