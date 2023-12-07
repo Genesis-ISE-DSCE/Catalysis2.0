@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 
 const Faqs = () => {
@@ -85,3 +86,4 @@ const Faqs = () => {
 }
 
 export default Faqs;
+
