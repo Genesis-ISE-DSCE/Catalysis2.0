@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate } from 'react-router-dom';
+import catalysis from "../assets/catalysis.png";
 
 export default function ConfettiComp() {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ export default function ConfettiComp() {
 
   const handleButtonClick = () => {
     setIsConfettiActive(true);
-    navigate("/")
+    navigate("/");
   };
 
   useEffect(() => {
@@ -32,8 +33,13 @@ export default function ConfettiComp() {
   };
 
   return (
-    <div className="confet" >
-      <button className='cbtn' onClick={handleButtonClick} >Launch Website</button>
+    <div className="confet flex flex-col items-center justify-center">
+      <img
+        src={catalysis}
+        alt="Catalysis Logo"
+        className="max-w-full h-auto mb-4 transform sm:scale-125 scale-100"
+      />
+      <button className='cbtn text-sm mt-3 sm:mt-5' onClick={handleButtonClick}>Launch Website</button>
       <Confetti active={isConfettiActive} config={confettiConfig} />
     </div>
   );
