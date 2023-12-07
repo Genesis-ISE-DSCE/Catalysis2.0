@@ -8,7 +8,7 @@ const Faqs = React.lazy(()=>import('../components/Faqs'));
 const Gallery = React.lazy(()=>import('../components/Gallery'));
 const Landing = React.lazy(()=>import('../components/Landing'));
 // const Navbar = React.lazy(()=>import('../components/Navbar'));
-// const Schedule = React.lazy(()=>import('../components/Schedule'));
+const Schedule = React.lazy(()=>import('../components/Schedule'));
 const Sponsors = React.lazy(()=>import('../components/Sponsors'));
 
 const LandingPage = () => {
@@ -26,9 +26,9 @@ const LandingPage = () => {
                 <Events />
             </Suspense>
 
-            {/* <Suspense fallback={<div>Loading...</div>}>
+             <Suspense fallback={<div>Loading...</div>}>
                 <Schedule />
-            </Suspense> */}
+            </Suspense> 
 
             <Suspense fallback={<div>Loading...</div>}>
                 <Gallery />
