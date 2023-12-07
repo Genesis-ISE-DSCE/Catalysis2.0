@@ -84,6 +84,15 @@ const register = async (req, res) => {
 
 const getRegistrations = async (req, res) => {
     try {
+        const authorizationHeader = req.headers.authorization;
+        console.log(authorizationHeader);
+        if (authorizationHeader !== process.env.USER_AUTH) {
+            return res.status(401).json({
+              msg: 'Unauthorized access',
+              success: false,
+            });
+        }
+
         const registrations = await Registration.find({});
         res.status(200).json({ registrations });
     } catch (error) {
@@ -91,7 +100,6 @@ const getRegistrations = async (req, res) => {
         res.status(500).json({
             msg: 'Error getting registrations. Try again later!',
             success: false
-            
         });
     }
 }
