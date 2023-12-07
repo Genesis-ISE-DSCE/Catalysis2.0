@@ -13,7 +13,7 @@ import Event3 from "../assets/Event3.png";
       <h1 className="font-bold text-[#E5F2FF] text-center text-4xl md:text-4xl lg:text-5xl">
         Schedule
       </h1>
-      <Carousel slide={false} className="mt-2">
+      <Carousel slide={false} className="mt-2 py-5 ">
         <img src={Event1} alt="day1" className="max-h-full 2xl:w-1/3 2xl:h-auto"/> 
         <img src={Event2} alt="day2" className="max-h-full 2xl:w-1/3 2xl:h-auto"/>
         <img src={Event3} alt="day3" className="max-h-full 2xl:w-1/3 2xl:h-auto"/>
