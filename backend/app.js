@@ -8,12 +8,6 @@ const massMailerRoute = require('./routes/massMailRoute');
 require('dotenv').config();
 const cors = require('cors');
 
-const corsOptions = {
-  origin: 'https://isecatalysis.in',
-  methods: ['GET', 'POST', 'PUT'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-};
-
 app.use(cors());
 app.use(express.json());
 
