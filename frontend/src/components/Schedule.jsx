@@ -9,7 +9,7 @@ const Schedule = () => {
   return (
     <>
 
-      <div id="schedule" className="bg-gradient-to-b from-[#29153D] to-[#000000] pb-10 pt-7" >
+      <div id="schedule" className="bg-gradient-to-b from-[#29153D] to-[#000000] pb-2  md:pb-3  xl:pb-10 2xl:pb-10  pt-7" >
         <div className="h-screen">
           <h1 className="font-bold text-[#E5F2FF] text-center text-4xl pt-5 md:text-4xl lg:text-5xl">
             Schedule
@@ -21,7 +21,7 @@ const Schedule = () => {
           </Carousel>
           <style jsx>{`
         .carousel-style {
-          margin-top: -4rem;
+          margin-top: -1.5rem;
         }
 
         @media (max-width: 768px) {

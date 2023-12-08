@@ -152,7 +152,7 @@ const Faqs = () => {
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex items-center">
-                <div className="text-lg font-semibold">{item.title}</div>
+                <div className="text-lg font-semibold tittle">{item.title}</div>
                 <div className="ml-auto">
                   <svg
                     className={`h-6 w-6 transform ${
