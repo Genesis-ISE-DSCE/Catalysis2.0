@@ -10,11 +10,11 @@ const cors = require('cors');
 
 const corsOptions = {
   origin: 'https://isecatalysis.in',
-  methods: ['GET', 'POST', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/v1', registerRoute);
