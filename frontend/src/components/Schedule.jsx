@@ -1,8 +1,8 @@
 import React from "react";
 import { Carousel } from 'flowbite-react';
-import Event1 from "../assets/Event1.png";
-import Event2 from "../assets/Events2.png";
-import Event3 from "../assets/Event3.png";
+import Event1 from "../assets/Day1.png";
+import Event2 from "../assets/Day2.png";
+import Event3 from "../assets/Day3.png";
 
 const Schedule = () => {
 
@@ -15,9 +15,9 @@ const Schedule = () => {
             Schedule
           </h1>
           <Carousel slide={true} className="carousel-style" >
-            <img src={Event1} alt="day1" className="h-3/4 2xl:w-1/2 sm:w-1/2 2xl:h-auto pb-10" />
-            <img src={Event2} alt="day2" className="h-3/4 2xl:w-1/2 2xl:h-auto" />
-            <img src={Event3} alt="day3" className="h-3/4 2xl:w-1/2 2xl:h-auto" />
+            <img src={Event1} alt="day1" className="h-3/4 2xl:w-1/2 sm:w-1/2 2xl:h-auto pb-10 sm:mt-10" />
+            <img src={Event2} alt="day2" className="h-3/4 2xl:w-1/2 2xl:h-auto sm:mt-4" />
+            <img src={Event3} alt="day3" className="h-3/4 2xl:w-1/2 2xl:h-auto sm:mt-2" />
           </Carousel>
           <style jsx>{`
         .carousel-style {
@@ -30,7 +30,7 @@ const Schedule = () => {
           }
 
           .carousel-style img {
-            margin-bottom: 5px; 
+            margin-bottom: 0px; 
           }
         }
       `}</style>
