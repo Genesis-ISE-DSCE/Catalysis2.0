@@ -56,18 +56,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailAll = async (req, res) => {
-    // Handle CORS preflight requests
-    if (req.method === 'OPTIONS') {
-      res.setHeader('Access-Control-Allow-Origin', 'https://isecatalysis.in');
-      res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
-      res.setHeader('Access-Control-Allow-Headers',
-   
-  'Content-Type, Authorization');
-      res.status(200).send();
-      return;
-    }
   
-    // Handle POST requests
     try {
       const { user, subject, body, event, attachmentDocs } = req.body;
   

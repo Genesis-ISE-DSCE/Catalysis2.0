@@ -31,8 +31,10 @@ const mailSystem = async (email) => {
                 to: email,
                 subject: 'Catalysis2.0 Registration',
                 html: `<div>
-                            <p>Your registration is successful!</p> 
-                            <p>The WhatsApp link will be shared soon. Kindly check your mail for further updates.</p>
+                            <p>You've successfully registered for Catalysis!</p>
+                            <p>Thank you for joining us. We're excited about your enthusiastic participation. Please stay tuned to our Instagram page (@genesis.ise) for further updates and important announcements. The event WhatsApp group link will be shared once the registration closes.</p> 
+                            <p>For any event-related queries, feel free to reach out to our team via this email, our Instagram page or visit the registration desks.</p>
+                            <p>We look forward to an amazing event with you!</p>
                         </div>`,
                 attachments: [pdfAttachment1, pdfAttachment2],
             });
