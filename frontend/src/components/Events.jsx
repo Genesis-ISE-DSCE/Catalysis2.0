@@ -16,8 +16,8 @@ const events = [
     },
     {
         img: require('../assets/lecture.png'),
-        heading: 'Lecture Series',
-        content: 'Dive into our Lecture Series, a knowledge-rich forum where experts illuminate diverse fields, fostering intellectual exploration and insights.',
+        heading: 'Workshop',
+        content: 'Dive into our Open Source Workshop, a knowledge-rich forum where expert illuminate diverse fields, fostering intellectual exploration and insights.',
         rules: require("../assets/docs/Code Of Conduct.pdf")
     },
     {
@@ -48,7 +48,7 @@ const events = [
         img:require('../assets/relay.png'),
         heading:'Coding Relay Race',
         content:'Join the frenzy at Coding Relay Race a high-energy team challenge! Race against the clock, pass the baton, and conquer the programming challenges.',
-        rules: require("../assets/docs/Code Of Conduct.pdf")
+        rules: require("../assets/docs/Coding Relay Race Rulebook.pdf")
     }
 ]
 

@@ -34,7 +34,7 @@ const attachmentDocsPath = [
     },
     {
         "filename": "CodingRelayRace-Rulebook",
-        "path": path.join(__dirname, '../assets/Code Of Conduct.pdf'),
+        "path": path.join(__dirname, '../assets/Coding Relay Race Rulebook.pdf'),
     },
     {
         "filename": "Terms&Conditions",

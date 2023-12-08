@@ -9,7 +9,7 @@ const Schedule = () => {
   return (
     <>
 
-      <div className="bg-gradient-to-b from-[#29153D] to-[#000000] pb-10 pt-7" >
+      <div id="schedule" className="bg-gradient-to-b from-[#29153D] to-[#000000] pb-10 pt-7" >
         <div className="h-screen">
           <h1 className="font-bold text-[#E5F2FF] text-center text-4xl pt-5 md:text-4xl lg:text-5xl">
             Schedule
@@ -19,11 +19,22 @@ const Schedule = () => {
             <img src={Event2} alt="day2" className="h-3/4 2xl:w-1/2 2xl:h-auto" />
             <img src={Event3} alt="day3" className="h-3/4 2xl:w-1/2 2xl:h-auto" />
           </Carousel>
-          <style>{`
-              .carousel-style {
-                margin-top: -5rem;
-              }
-            `}</style>
+          <style jsx>{`
+        .carousel-style {
+          margin-top: -4rem;
+        }
+
+        @media (max-width: 768px) {
+          .carousel-style {
+            margin-top: -8rem;
+          }
+
+          .carousel-style img {
+            margin-bottom: 5px; 
+          }
+        }
+      `}</style>
+
         </div>
       </div>
     </>

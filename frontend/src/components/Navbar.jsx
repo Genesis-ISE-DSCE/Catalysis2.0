@@ -46,9 +46,9 @@ const Navbar = () => {
           <li>
             <Link to="/#events" onClick={() => handleItemClick("events")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Events</Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/#schedule" onClick={() => handleItemClick("schedule")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Schedule</Link>
-          </li> */}
+          </li>
           <li>
             <Link to="/#gallery" onClick={() => handleItemClick("gallery")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Gallery</Link>
           </li>
