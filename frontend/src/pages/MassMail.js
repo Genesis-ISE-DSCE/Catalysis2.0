@@ -38,7 +38,7 @@ const MassMail = () => {
         // http://13.235.9.178:5000/api/v1/sendMassMail
         // https://catalysis20-production.up.railway.app/api/v1/sendMassMail
 
-        axios.post("https://catalysis20-production.up.railway.app/api/v1/sendMassMail", inputs)
+        axios.post("https://catalysis20-backend.up.railway.app/api/v1/sendMassMail", inputs)
         .then((res)=>console.log("The mail was sent successfully"))
         .catch((error)=>console.log(error))
     }
