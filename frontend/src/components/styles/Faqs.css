@@ -1,0 +1,31 @@
+.accordion-item {
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 60px; 
+}
+@media (max-width: 768px) {
+  .tittle {
+    font-size: smaller;
+    margin-top: -5%;
+  }
+}
+@media (max-width: 768px) {
+  .accordion-content {
+    font-size: smaller;
+  }
+}
+  .accordion-item.open {
+    max-height: 500px; 
+  } 
+  
+  .accordion-content {
+    padding: 12px 16px;
+    overflow: hidden;
+    max-height: 5px;
+    transition: max-height 0.5s ease-in-out;
+    background-color: #52356f;
+  }
+  
+   .accordion-content.open {
+    max-height: 300px;
+   }
