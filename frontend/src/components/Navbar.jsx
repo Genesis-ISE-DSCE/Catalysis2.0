@@ -42,11 +42,9 @@ const Navbar = () => {
             <Link to="/" onClick={() => handleItemClick("landing")} className="text-[#F4D9D9] 
             lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1" aria-current="page">Home</Link>
           </li>
-           
-          <li>
-            <Link to="/#about" onClick={() => handleItemClick("about")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1">About</Link>
-          </li>
-           
+          {/* <li>
+            <Link to="/#about" onClick={() => handleItemClick("about")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">About</Link>
+          </li> */}
           <li>
 
             <Link to="/#events" onClick={() => handleItemClick("events")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1">Events</Link>
@@ -55,10 +53,9 @@ const Navbar = () => {
           <li>
             <Link to="/#schedule" onClick={() => handleItemClick("schedule")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Schedule</Link>
           </li>
-          <li>
-            <Link to="/#gallery" onClick={() => handleItemClick("gallery")} className="text-[#F4D9D9] hidden lg:block lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1">Gallery</Link>
-          </li>
-           
+          {/* <li>
+            <Link to="/#gallery" onClick={() => handleItemClick("gallery")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Gallery</Link>
+          </li> */}
           <li>
             <Link to="/#sponsors" onClick={() => handleItemClick("sponsors")} className="text-[#F4D9D9] hidden lg:block md:block xl:block  lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Sponsors</Link>
           </li>
@@ -66,12 +63,9 @@ const Navbar = () => {
           <li>
             <Link to="/#faqs" onClick={() => handleItemClick("faqs")} className="text-[#F4D9D9] hiddenlg:block md:block xl:block lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1">Faq's</Link>
           </li>
-        
-          <li>
-            <Link to="/#contact" onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] 
-            hidden lg:block md:block xl:block  lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</Link>
-          </li>
-           
+          {/* <li>
+            <Link to="/#contact" onClick={() => handleItemClick("contact")} className="text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline">Contact</Link>
+          </li> */}
           <li>
             <Link to="/registration" onClick={() => handleItemClick("registration")} className="tagline text-[#F4D9D9] lg:text-2xl md:text-lg font-bold cursor-pointer hover:text-[#B1F8F2] hover:underline focus:text-[#B1F8F2] focus:underline mb-1">Register</Link>
           </li> 

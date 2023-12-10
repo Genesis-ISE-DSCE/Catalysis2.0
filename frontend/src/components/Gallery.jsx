@@ -10,7 +10,7 @@ import H from '../assets/gallery/H.jpg';
 import I from '../assets/gallery/I.jpg';
 import J from '../assets/gallery/J.jpg';
 import K from '../assets/gallery/K.jpg';
-import V from '../assets/gallery/V.jpg';
+import L from '../assets/gallery/L.jpg';
 import A2 from '../assets/gallery/A.webp';
 import B2 from '../assets/gallery/B.webp';
 import C2 from '../assets/gallery/C.webp';
@@ -22,7 +22,7 @@ import H2 from '../assets/gallery/H.webp';
 import I2 from '../assets/gallery/I.webp';
 import J2 from '../assets/gallery/J.webp';
 import K2 from '../assets/gallery/K.webp';
-import V2 from '../assets/gallery/V.webp';
+import L2 from '../assets/gallery/L.webp';
 import A1 from '../assets/gallery/A.avif';
 import B1 from '../assets/gallery/B.avif';
 import C1 from '../assets/gallery/C.avif';
@@ -34,7 +34,7 @@ import H1 from '../assets/gallery/H.avif';
 import I1 from '../assets/gallery/I.avif';
 import J1 from '../assets/gallery/J.avif';
 import K1 from '../assets/gallery/K.avif';
-import V1 from '../assets/gallery/V.avif';
+import L1 from '../assets/gallery/L.avif';
 import Asmall from '../assets/gallery/Asmall.jpg';
 import Bsmall from '../assets/gallery/Bsmall.jpg';
 import Csmall from '../assets/gallery/Csmall.jpg';
@@ -46,7 +46,7 @@ import Hsmall from '../assets/gallery/Hsmall.jpg';
 import Ismall from '../assets/gallery/Ismall.jpg';
 import Jsmall from '../assets/gallery/Jsmall.jpg';
 import Ksmall from '../assets/gallery/Ksmall.jpg';
-import Vsmall from '../assets/gallery/Vsmall.jpg';
+import Lsmall from '../assets/gallery/Lsmall.jpg';
  
 const Gallery = () => {
 
@@ -62,7 +62,7 @@ const Gallery = () => {
     { large: I, small: Ismall, avif: I1, webp: I2  },
     { large: J, small: Jsmall, avif: J1, webp: J2  },
     { large: K, small: Ksmall, avif: K1, webp: K2  },
-    { large: V, small: Vsmall, avif: V1, webp: V2  },
+    { large: L, small: Lsmall, avif: L1, webp: L2  },
   ];
 
   const [lightboxImage, setLightboxImage] = useState(null);

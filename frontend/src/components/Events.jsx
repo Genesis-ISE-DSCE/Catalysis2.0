@@ -16,9 +16,9 @@ const events = [
     },
     {
         img: require('../assets/lecture.png'),
-        heading: 'Workshop',
-        content: 'Dive into our Open Source Workshop, a knowledge-rich forum where expert illuminate diverse fields, fostering intellectual exploration and insights.',
-        rules: require("../assets/docs/Code Of Conduct.pdf")
+        heading: 'Tech Talk',
+        content: 'Dive into the dynamic world of open source at our Tech Talk. Let our expert guide you through its possibilities, sparking curiosity and igniting intellectual insights.',
+        rules: require("../assets/docs/RB Tech talk.pdf")
     },
     {
         img: require('../assets/dsa.png'),
