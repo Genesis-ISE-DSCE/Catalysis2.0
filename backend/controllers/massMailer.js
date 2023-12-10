@@ -14,7 +14,7 @@ const attachmentDocsPath = [
     },
     {
         "filename": "LectureSeries(Workshop)-Rulebook",
-        "path": path.join(__dirname, '../assets/Code Of Conduct.pdf'),
+        "path": path.join(__dirname, '../assets/RB Tech talk.pdf'),
     },
     {
         "filename": "DSASmackDown-Rulebook",
