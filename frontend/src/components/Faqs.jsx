@@ -119,7 +119,7 @@ const Faqs = () => {
     {
       title: "How can I register for the technical fest?",
       content:
-        "Registration for the technical fest will typically be done online on the official website or through a designated registration form.",
+        "Registration for the technical fest will be done online on the official website.",
     },
   ];
 
