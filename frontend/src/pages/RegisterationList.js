@@ -14,6 +14,8 @@ const RegisterationList = () => {
       },
     };
 
+    // http://localhost:5000/api/v1/getAllRegistrations
+    // https://catalysis20-backend.up.railway.app/api/v1/getAllRegistrations'
     Axios.get('https://catalysis20-backend.up.railway.app/api/v1/getAllRegistrations', config)
       .then((response) => {
         const data = response.data;
