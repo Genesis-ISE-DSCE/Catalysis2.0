@@ -76,6 +76,7 @@ const RegisterationList = () => {
             <option value="UI/UXDesign">UI/UXDesign</option>
             <option value="CodingRelayRace">Coding Relay Race</option>
             <option value="LectureSeries(Workshop)">Lecture Series Workshop</option>
+            <option value="CodeRed">Code Red</option>
           </select>
         </div>
       <div className='flex justify-center items-center'>
