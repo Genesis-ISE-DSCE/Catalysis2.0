@@ -183,11 +183,11 @@ function RegistrationForm() {
             <option value="" disabled>Select Event</option>
             <option value="PromptDesigner">Prompt Designer</option>
             <option value="TechnicalQuiz">Technical Quiz (Team Event)</option>
-            <option value="LectureSeries(Workshop)">Lecture Series (Workshop)</option>
+            {/* <option value="LectureSeries(Workshop)">Lecture Series (Workshop)</option> */}
             <option value="DSASmackDown">DSA SmackDown</option>
             <option value="UI/UXDesign">UI/UX Design</option>
             <option value="CodeRed">CodeRed (Team Event)</option>
-            <option value="Technoseek">Technoseek (Team Event)</option>
+            {/* <option value="Technoseek">Technoseek (Team Event)</option> */}
             <option value="CodingRelayRace">Coding Relay Race (Team Event)</option>
           </select>
           <p className="text-red-600">{formErrors.event}</p>
