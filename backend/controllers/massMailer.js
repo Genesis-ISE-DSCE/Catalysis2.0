@@ -47,6 +47,9 @@ const attachmentDocsPath = [
 ];
 
 const transporter = nodemailer.createTransport({
+    pool: true,
+    maxConnections: 11,
+    maxMessages: Infinity,
     host: 'smtp.gmail.com',
     port: 465,
     auth: {
