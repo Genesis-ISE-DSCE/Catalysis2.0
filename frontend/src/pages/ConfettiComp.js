@@ -1,109 +1,59 @@
-import React, {useRef,useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
-import { useNavigate } from 'react-router-dom';
-import catalysis from "../assets/catalysis.png";
+import catalysis from '../assets/catalysis.png';
+
 export default function ConfettiComp() {
-  const navigate = useNavigate();
   const [isConfettiActive, setIsConfettiActive] = useState(false);
-  const [countdown,setCountdown]=useState(5)
-  const timerId=useRef()
-  const [startCount,setstartCount]=useState(false);
+  const [countdown, setCountdown] = useState(5);
+  const timerId = useRef();
+  const [startCount, setStartCount] = useState(false);
 
-  function setCount()
-  {
-    setstartCount(true);
+  const setCount = () => {
+    setStartCount(true);
     setCountdown(5);
-
-  }
-
- 
-  const handleButtonClick = () => {
-    setIsConfettiActive(true);
-    navigate("/");
   };
 
   useEffect(() => {
-    if (isConfettiActive) {
-      const timeoutId = setTimeout(() => {
-        setIsConfettiActive(false);
-      }, 1000);
+    timerId.current = setInterval(() => {
+      setCountdown((prev) => prev - 1);
 
-      return () => {
-        clearTimeout(timeoutId);
-      };
-    }
-  }, [isConfettiActive]);
+      // Clear the interval when countdown reaches 0
+      if (countdown === 0) {
+        clearInterval(timerId.current);
+        setIsConfettiActive(true);
+      }
+    }, 1000);
 
-  const confettiConfig = {
-    angle: 90,
-    spread: 360,
-    startVelocity: 40,
-    elementCount: 70,
-    decay: 0.95,
-  };
+    // Clear interval on component unmount
+    return () => clearInterval(timerId.current);
+  }, [countdown]);
 
-  
-  useEffect(() => {
-    timerId.current=setInterval(() => {
-
-        
-         setCountdown(prev=>{
-        return prev-1/2
-        
-      
-        })
-        }, 1000)
-  
-        
-        
-          return ()=> clearInterval(timerId)
-  },[]) 
-  
-  
-
-  if(startCount===true){
-   
-    
-    if(countdown>=0){
-  return (
-
-  
-    <div className="confet flex flex-col items-center justify-center">
-      <img
-        src={catalysis}
-        alt="Catalysis Logo"
-        className="max-w-full h-auto mb-4 transform sm:scale-125 scale-100"
-      />
-      <h1 class="text-[#E26EE5] text-5xl">{""+countdown}</h1>
-    </div>
-  );
-    }
-
-    else{
-      return (
-        <div className="confet flex flex-col items-center justify-center">
-          <img
-            src={catalysis}
-            alt="Catalysis Logo"
-            className="max-w-full h-auto mb-4 transform sm:scale-125 scale-100"
-          />
-          <h1 class="text-[#E26EE5] text-5xl bold">IsLive</h1>
-          <Confetti active={isConfettiActive} config={confettiConfig} />
-
-        </div>
-      );
-    }
-  }
- else{
   return (
     <div className="confet flex flex-col items-center justify-center">
       <img
         src={catalysis}
         alt="Catalysis Logo"
         className="max-w-full h-auto mb-4 transform sm:scale-125 scale-100"
+        style={{ marginBottom: '16px' }}
       />
-      <button className='cbtn text-sm mt-3 sm:mt-5' onClick={setCount}>Start</button>
+
+      {startCount ? (
+        countdown >= 0 ? (
+          <h1 className="text-[#E26EE5] text-6xl font-bold mb-4 mt-10">{countdown}</h1>
+        ) : (
+          <>
+            <h1 className="text-[#E26EE5] text-6xl font-bold mb-4 mt-10">Is Live!!</h1>
+            <Confetti active={isConfettiActive} />
+          </>
+        )
+      ) : (
+        <button
+          className="cbtn text-lg mt-10 sm:mt-10 px-6 py-3"
+          onClick={setCount}
+        >
+          Start
+        </button>
+      )}
     </div>
   );
- }
 }
